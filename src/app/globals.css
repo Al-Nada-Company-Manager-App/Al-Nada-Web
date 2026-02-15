@@ -74,8 +74,8 @@
     --popover: #0f255f;
     --popover-foreground: #e6f2ff;
 
-    --primary: #1ea5ff;
-    --primary-foreground: #0a1a4f;
+    --primary: #1e5eff;
+    --primary-foreground: #ffffff;
 
     --secondary: #102a6b;
     --secondary-foreground: #e6f2ff;
@@ -125,4 +125,13 @@
   --border: #1c3c8f;
   --input: #1c3c8f;
   --ring: #1ea5ff;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% center;
+  }
+  100% {
+    background-position: 200% center;
+  }
 }

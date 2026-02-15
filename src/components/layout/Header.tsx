@@ -39,15 +39,15 @@ export function Header() {
 
   const navItems = [
     { label: { en: "Home", ar: "الرئيسية" }, href: "/", section: "" },
-    { label: { en: "About", ar: "من نحن" }, href: "/#about", section: "about" },
+    { label: { en: "About", ar: "من نحن" }, href: "/about", section: "about" },
     {
       label: { en: "Services", ar: "خدماتنا" },
-      href: "/#services",
+      href: "/services",
       section: "services",
     },
     {
       label: { en: "Partners", ar: "شركاؤنا" },
-      href: "/#partners",
+      href: "/partners",
       section: "partners",
     },
   ];
@@ -74,7 +74,7 @@ export function Header() {
     <>
       <header
         className={cn(
-          "fixed top-5 left-1/2 -translate-x-1/2 z-50 w-[95%] max-w-[1237px] h-[74px] rounded-full flex items-center px-4 md:px-6 lg:px-8 transition-all duration-300",
+          "fixed top-7 left-1/2 -translate-x-1/2 z-50 w-[95%] max-w-[1237px] h-[60px] rounded-full flex items-center px-4 md:px-6 lg:px-8 transition-all duration-300",
           scrolled
             ? "bg-background/80 backdrop-blur-xl border border-border/50 shadow-xl shadow-primary/5"
             : "bg-background/40 backdrop-blur-md border border-white/20 dark:border-white/5",
@@ -105,7 +105,7 @@ export function Header() {
                   "text-sm font-bold transition-all duration-300",
                   pathname === "/" && !activeSection && item.href === "/"
                     ? "text-primary"
-                    : "text-gray-300 hover:text-white",
+                    : "text-foreground hover:text-primary dark:text-gray-300 dark:hover:text-white",
                 )}
               >
                 {language === "en" ? item.label.en : item.label.ar}
@@ -154,7 +154,9 @@ export function Header() {
                 href={item.href}
                 className={cn(
                   "text-sm font-bold transition-all duration-300",
-                  "text-gray-300 hover:text-white",
+                  pathname === "/" && !activeSection && item.href === "/"
+                    ? "text-primary"
+                    : "text-foreground hover:text-primary dark:text-gray-300 dark:hover:text-white",
                 )}
               >
                 {language === "en" ? item.label.en : item.label.ar}
@@ -175,19 +177,20 @@ export function Header() {
           {/* Theme Toggle */}
           <button
             onClick={() => setTheme(currentTheme === "dark" ? "light" : "dark")}
-            className="p-2 text-gray-400 hover:text-white transition-colors"
+            className="p-2 text-foreground hover:text-primary dark:text-gray-400 dark:hover:text-white transition-colors"
           >
-            {currentTheme === "dark" ? (
-              <Moon className="h-5 w-5" />
-            ) : (
-              <Sun className="h-5 w-5" />
-            )}
+            {mounted &&
+              (currentTheme === "dark" ? (
+                <Moon className="h-5 w-5" />
+              ) : (
+                <Sun className="h-5 w-5" />
+              ))}
           </button>
 
           {/* Language Toggle */}
           <button
             onClick={toggleLanguage}
-            className="hidden md:flex items-center gap-1 text-xs font-bold text-gray-400 hover:text-white transition-colors uppercase"
+            className="hidden md:flex items-center gap-1 text-xs font-bold text-foreground hover:text-primary dark:text-gray-400 dark:hover:text-white transition-colors uppercase"
           >
             <Globe className="h-4 w-4" />
             <span>{language === "en" ? "AR" : "EN"}</span>
@@ -195,7 +198,7 @@ export function Header() {
 
           {/* CTA */}
           <Link
-            href="#contact"
+            href="/contact"
             className="hidden md:inline-flex items-center justify-center px-6 py-2.5 rounded-full font-bold bg-primary text-white hover:bg-primary/90 transition-all shadow-lg shadow-primary/25 hover:shadow-primary/40 hover:-translate-y-0.5 text-sm"
           >
             {language === "en" ? "Contact" : "اتصل بنا"}
@@ -204,7 +207,7 @@ export function Header() {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className="md:hidden text-gray-300 hover:text-white p-2"
+            className="md:hidden text-foreground hover:text-primary dark:text-gray-300 dark:hover:text-white p-2"
           >
             {isMenuOpen ? (
               <X className="h-6 w-6" />
@@ -244,7 +247,7 @@ export function Header() {
             </button>
 
             <Link
-              href="#contact"
+              href="/contact"
               onClick={() => setIsMenuOpen(false)}
               className="w-full max-w-xs px-8 py-4 rounded-full font-bold bg-primary text-primary-foreground text-lg shadow-xl shadow-primary/20 hover:scale-105 transition-all"
             >
