@@ -22,7 +22,7 @@ export const CONTACT_INFO_CARDS = [
     values: [
       {
         en: "67 Mahattet ElKoba, Cairo, Egypt",
-        ar: "٦٧ محطة الكوبة، القاهرة، مصر",
+        ar: "٦٧ محطة القبة، القاهرة، مصر",
       },
     ],
     href: "https://maps.google.com/?q=Al+Nada+Scientific+Office",

@@ -11,10 +11,13 @@ import { useTheme } from "next-themes";
 import { cn } from "@/lib/utils";
 import { HERO_CONTENT, HERO_STATS, HERO_IMAGES } from "@/constants/hero";
 
+import { HeroCards } from "@/components/features/home/HeroCards";
+
 export function Hero() {
   const { language } = useLanguage();
   const { resolvedTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
+  const containerRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     setMounted(true);
@@ -27,8 +30,7 @@ export function Hero() {
   return (
     <section
       className={cn(
-        "relative grid min-h-screen w-full place-content-center overflow-hidden transition-colors duration-500",
-        // Light mode: clean bright bg | Dark mode: deep navy
+        "relative grid min-h-[100svh] w-full place-content-center overflow-hidden transition-colors duration-500",
         isDark
           ? "bg-[#060f2e]"
           : "bg-gradient-to-br from-[#f0f6ff] via-[#e8f0fe] to-[#dde8f8]",
@@ -67,7 +69,7 @@ export function Hero() {
       {/* Background Large Text */}
       <h2
         className={cn(
-          "relative z-0 text-[15vw] md:text-[200px] font-black select-none transition-colors duration-300",
+          "relative z-0 text-[18vw] md:text-[200px] font-black select-none transition-colors duration-300 leading-none",
           isDark ? "text-white/[0.06]" : "text-[#0a1a4f]/[0.04]",
         )}
       >
@@ -75,9 +77,12 @@ export function Hero() {
         <span className="text-primary">.</span>
       </h2>
 
-      {/* Draggable Cards Layer */}
-      <div className="absolute inset-0 z-10 pointer-events-none">
-        <Cards isDark={isDark} />
+      {/* Draggable Cards Layer — Hidden on mobile/tablet for clean UX */}
+      <div
+        ref={containerRef}
+        className="absolute inset-0 z-10 pointer-events-none hidden xl:block"
+      >
+        <HeroCards isDark={isDark} containerRef={containerRef} />
       </div>
 
       {/* Content Overlay */}
@@ -88,9 +93,9 @@ export function Hero() {
           transition={{ duration: 0.7, ease: "easeOut" as const }}
           className={cn(
             "container relative flex flex-col items-center text-center pointer-events-auto max-w-4xl mx-4 transition-all duration-500",
-            "p-6 md:p-10 rounded-3xl border shadow-2xl backdrop-blur-xl",
+            "p-6 md:p-10 rounded-3xl border shadow-2xl backdrop-blur-md xl:backdrop-blur-xl mt-16 md:mt-0",
             isDark
-              ? "bg-black/50 border-white/10 shadow-black/30"
+              ? "bg-[#060f2e]/70 border-white/10 shadow-black/30"
               : "bg-white/70 border-[#d6e6ff]/80 shadow-primary/5",
             isRTL && "rtl",
           )}
@@ -115,7 +120,7 @@ export function Hero() {
 
           <h1
             className={cn(
-              "text-4xl md:text-6xl font-extrabold tracking-tight mb-6 leading-tight py-2",
+              "text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight mb-4 md:mb-6 leading-tight py-2",
               "bg-clip-text text-transparent bg-gradient-to-r",
               isDark
                 ? "from-primary via-blue-400 to-cyan-300"
@@ -126,17 +131,17 @@ export function Hero() {
           </h1>
           <p
             className={cn(
-              "text-lg md:text-xl mb-8 max-w-2xl leading-relaxed font-medium",
+              "text-base md:text-xl mb-6 md:mb-8 max-w-2xl leading-relaxed font-medium",
               isDark ? "text-gray-300" : "text-[#4a6fa5]",
             )}
           >
             {t.description}
           </p>
-          <div className="flex flex-wrap items-center justify-center gap-4">
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-3 w-full sm:w-auto">
             <Button
               asChild
               size="lg"
-              className="text-lg px-8 py-6 rounded-full shadow-lg shadow-primary/25 hover:shadow-primary/40 transition-all bg-primary text-white hover:bg-primary/90 border-none hover:-translate-y-0.5 font-bold"
+              className="text-base sm:text-lg w-full sm:w-auto px-6 sm:px-8 py-6 sm:py-6 rounded-full shadow-lg shadow-primary/25 hover:shadow-primary/40 transition-all bg-primary text-white hover:bg-primary/90 border-none hover:-translate-y-0.5 font-bold"
             >
               <Link href="/products">{t.cta}</Link>
             </Button>
@@ -145,7 +150,7 @@ export function Hero() {
               variant="outline"
               size="lg"
               className={cn(
-                "text-lg px-8 py-6 rounded-full border-2 transition-all backdrop-blur-md hover:-translate-y-0.5 font-bold",
+                "text-base sm:text-lg w-full sm:w-auto px-6 sm:px-8 py-6 sm:py-6 rounded-full border-2 transition-all backdrop-blur-md hover:-translate-y-0.5 font-bold",
                 isDark
                   ? "border-white/20 bg-white/5 text-white hover:bg-white/10 hover:border-white/40"
                   : "border-[#d6e6ff] bg-white/50 text-[#0a1a4f] hover:bg-white/80 hover:border-primary/40",
@@ -158,18 +163,18 @@ export function Hero() {
           {/* Stats row */}
           <div
             className={cn(
-              "flex gap-8 pt-6 mt-6 border-t",
+              "grid grid-cols-3 gap-4 sm:gap-8 pt-6 mt-6 border-t w-full",
               isDark ? "border-white/10" : "border-[#d6e6ff]",
             )}
           >
             {HERO_STATS.map((stat) => (
-              <div key={stat.value} className="flex flex-col">
-                <span className="text-2xl lg:text-3xl font-extrabold text-primary">
+              <div key={stat.value} className="flex flex-col text-center">
+                <span className="text-2xl sm:text-3xl font-extrabold text-primary">
                   {stat.value}
                 </span>
                 <span
                   className={cn(
-                    "text-xs sm:text-sm font-medium",
+                    "text-[10px] sm:text-sm font-medium uppercase tracking-wider",
                     isDark ? "text-gray-400" : "text-[#4a6fa5]",
                   )}
                 >
@@ -183,116 +188,3 @@ export function Hero() {
     </section>
   );
 }
-
-// ─── Draggable Cards ────────────────────────────────────────
-
-const Cards = ({ isDark }: { isDark: boolean }) => {
-  const containerRef = useRef<HTMLDivElement>(null);
-
-  const images = HERO_IMAGES;
-
-  return (
-    <div
-      className="absolute inset-0 z-10 w-full h-full pointer-events-auto"
-      ref={containerRef}
-    >
-      {images.map((img, i) => (
-        <Card
-          key={i}
-          containerRef={containerRef}
-          src={img.src}
-          alt={img.alt}
-          rotate={img.rotate}
-          top={img.top}
-          left={img.left}
-          className={img.width}
-          isDark={isDark}
-          index={i}
-        />
-      ))}
-    </div>
-  );
-};
-
-// ─── Single Draggable Card ──────────────────────────────────
-
-interface CardProps {
-  containerRef: React.RefObject<HTMLDivElement | null>;
-  src: string;
-  alt: string;
-  top: string;
-  left: string;
-  rotate: string;
-  className?: string;
-  isDark: boolean;
-  index: number;
-}
-
-const Card = ({
-  containerRef,
-  src,
-  alt,
-  top,
-  left,
-  rotate,
-  className,
-  isDark,
-  index,
-}: CardProps) => {
-  const [zIndex, setZIndex] = useState(0);
-
-  const updateZIndex = () => {
-    const els = document.querySelectorAll(".drag-elements");
-    let maxZIndex = -Infinity;
-    els.forEach((el) => {
-      const z = parseInt(
-        window.getComputedStyle(el).getPropertyValue("z-index"),
-      );
-      if (!isNaN(z) && z > maxZIndex) {
-        maxZIndex = z;
-      }
-    });
-    setZIndex(maxZIndex + 1);
-  };
-
-  return (
-    <motion.div
-      onMouseDown={updateZIndex}
-      initial={{ opacity: 0, scale: 0.8, rotate: 0 }}
-      animate={{ opacity: 1, scale: 1 }}
-      transition={{
-        duration: 0.5,
-        delay: index * 0.05,
-        ease: "easeOut" as const,
-      }}
-      style={{
-        top,
-        left,
-        rotate,
-        zIndex,
-      }}
-      className={twMerge(
-        "drag-elements absolute rounded-xl cursor-grab active:cursor-grabbing transition-shadow duration-300",
-        // Card frame styling — very different for light vs dark
-        isDark
-          ? "bg-[#0f1a3a] p-1.5 pb-2 border border-white/15 shadow-2xl shadow-black/40 hover:shadow-primary/20"
-          : "bg-white p-1.5 pb-2 border border-[#d6e6ff] shadow-xl shadow-blue-900/10 hover:shadow-primary/20",
-        className,
-      )}
-      drag
-      dragConstraints={containerRef}
-      dragElastic={0}
-      whileHover={{ scale: 1.05 }}
-      whileTap={{ scale: 0.97 }}
-    >
-      <div className="relative w-full h-auto rounded-lg overflow-hidden select-none">
-        <img
-          src={src}
-          alt={alt}
-          className="w-full h-auto object-cover pointer-events-none select-none"
-          draggable={false}
-        />
-      </div>
-    </motion.div>
-  );
-};
