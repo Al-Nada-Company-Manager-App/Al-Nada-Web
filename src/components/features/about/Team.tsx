@@ -19,7 +19,7 @@ export function AboutTeam({ isDark }: AboutTeamProps) {
   return (
     <section
       className={cn(
-        "relative py-24 md:py-32 overflow-hidden transition-colors duration-500",
+        "relative py-14 md:py-20 overflow-hidden transition-colors duration-500",
         isDark
           ? "bg-[#0a1433]"
           : "bg-gradient-to-b from-white via-[#f6f9ff] to-[#edf3ff]",
@@ -39,7 +39,7 @@ export function AboutTeam({ isDark }: AboutTeamProps) {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="text-center mb-14 md:mb-20"
+          className="text-center mb-10 md:mb-14"
         >
           <span
             className={cn(
@@ -70,7 +70,7 @@ export function AboutTeam({ isDark }: AboutTeamProps) {
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-3 gap-5 max-w-4xl mx-auto">
           {TEAM_MEMBERS.map((member, i) => (
             <TeamCard
               key={i}
@@ -130,7 +130,7 @@ function TeamCard({
         )}
       >
         {/* Photo */}
-        <div className="relative aspect-[3/4] overflow-hidden">
+        <div className="relative aspect-[4/5] overflow-hidden">
           <LazyImage
             src={member.photo}
             alt={name}
@@ -147,7 +147,7 @@ function TeamCard({
                 href={href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-10 h-10 rounded-full bg-white/90 backdrop-blur-sm flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-all duration-300 shadow-lg"
+                className="w-8 h-8 rounded-full bg-white/90 backdrop-blur-sm flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-all duration-300 shadow-lg"
               >
                 <Icon className="h-4 w-4" />
               </a>
@@ -156,16 +156,16 @@ function TeamCard({
         </div>
 
         {/* Info */}
-        <div className="p-5 text-center">
+        <div className="p-3 text-center">
           <h3
             className={cn(
-              "text-lg font-bold mb-1",
+              "text-sm font-bold mb-0.5",
               isDark ? "text-white" : "text-[#0a1a4f]",
             )}
           >
             {name}
           </h3>
-          <p className="text-sm font-medium text-primary">{position}</p>
+          <p className="text-xs font-medium text-primary">{position}</p>
         </div>
       </div>
     </motion.div>
