@@ -46,7 +46,10 @@ export const TEAM_CONTENT = {
     },
     {
       name: { en: "Basant Mohamed", ar: "بسنت محمد" },
-      position: { en: "Operations Manager", ar: "مدير العمليات" },
+      position: {
+        en: "Operations & HR Manager",
+        ar: "مدير العمليات والموارد البشرية",
+      },
       photo: "/img/team/hrmanger.png",
       socials: {
         linkedin:
@@ -54,19 +57,26 @@ export const TEAM_CONTENT = {
         email: "basant@alnadascientific.com",
       },
     },
-    // {
-    //   name: { en: "Mostafa Mohamed", ar: "مصطفى محمد" },
-    //   position: { en: "Technical Support", ar: "الدعم التقني" },
-    //   photo: "/img/team/technialsupport.png",
-    //   socials: {
-    //     linkedin: "#",
-    //     email: "info@alnadascientific.com",
-    //   },
-    // },
+    {
+      name: { en: "Mostafa Mohamed", ar: "مصطفى محمد" },
+      position: {
+        en: "Technical Service & Maintenance Technician",
+        ar: "تقني الخدمة والصيانة",
+      },
+      photo: "/img/team/technialsupport.png",
+      socials: {
+        linkedin: "#",
+        email: "info@alnadascientific.com",
+      },
+    },
     {
       name: { en: "Hamada Yasser", ar: "حمادة ياسر" },
-      position: { en: "Environmental Engineer", ar: "مهندس بيئي" },
-      photo: "/img/team/environmentalEngineer.png",
+      position: {
+        en: "Sales Representative & Environmental Engineer",
+        ar: "مهندس بيئي و ممثل مبيعات",
+      },
+      // photo: "/img/team/environmentalEngineer.png",
+      photo: "/img/team/salesrepresentative.png",
       socials: {
         linkedin: "https://www.linkedin.com/in/hamada-yasser-426560321/",
         email: "h.yasser@alnadascientific.com",
@@ -74,7 +84,10 @@ export const TEAM_CONTENT = {
     },
     {
       name: { en: "Ahmed Fathi", ar: "أحمد فتحي" },
-      position: { en: "IT Manager", ar: "مدير تقنية المعلومات" },
+      position: {
+        en: "Marketing Director & Software Engineer",
+        ar: "مدير التسويق ومهندس برمجيات",
+      },
       photo: "/img/team/IT Manager.jpeg",
       socials: {
         linkedin: "https://www.linkedin.com/in/ahmedfathy-x1",
@@ -83,7 +96,10 @@ export const TEAM_CONTENT = {
     },
     {
       name: { en: "Ahmed ElSayed", ar: "أحمد سيد" },
-      position: { en: "Digital Marketing", ar: "التسويق الرقمي" },
+      position: {
+        en: "Graphic Designer & Media Manager",
+        ar: "مصمم جرافيك و مدير وسائل الإعلام",
+      },
       photo: "/img/team/digitalMarketing.png",
       socials: {
         linkedin: "https://www.linkedin.com/in/ahmed-elsayed-1049463b5/",
