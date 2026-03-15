@@ -1,5 +1,5 @@
 import { PARTNERS } from "@/constants/partners";
-import PartnerPageClient from "./PartnerPageClient";
+import PartnerProductsPageClient from "./PartnerProductsPageClient";
 
 export function generateStaticParams() {
   return PARTNERS.map((partner) => ({
@@ -7,6 +7,6 @@ export function generateStaticParams() {
   }));
 }
 
-export default function PartnerPage() {
-  return <PartnerPageClient />;
+export default function PartnerProductsPage() {
+  return <PartnerProductsPageClient />;
 }
