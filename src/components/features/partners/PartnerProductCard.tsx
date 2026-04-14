@@ -72,7 +72,7 @@ export function PartnerProductCard({
         <div className="p-5 flex-1 flex flex-col justify-between">
           <h4
             className={cn(
-              "font-semibold text-sm md:text-base leading-snug",
+              "font-semibold text-sm md:text-base leading-snug text-center",
               isDark ? "text-white" : "text-[#0a1a4f]",
             )}
           >

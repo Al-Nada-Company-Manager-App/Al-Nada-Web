@@ -4,7 +4,8 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 import { cn } from "@/lib/utils";
 import { LazyImage } from "@/components/ui/LazyImage";
-import { ExternalLink, ArrowRight, ChevronRight } from "lucide-react";
+import { PartnerProductCard } from "@/components/features/partners/PartnerProductCard";
+import { ArrowRight, ChevronRight } from "lucide-react";
 import type { PartnerItem } from "@/constants/partners";
 import type { PartnerDetail } from "@/constants/partner-details";
 
@@ -261,64 +262,13 @@ export function PartnerDetailContent({
             {/* Products grid (show first 4) */}
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 md:gap-8 mb-12">
               {detail.products.slice(0, 4).map((product, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{
-                    delay: index * 0.1,
-                    duration: 0.5,
-                    ease: "easeOut",
-                  }}
-                  className="group"
-                >
-                  <div
-                    className={cn(
-                      "relative rounded-2xl overflow-hidden transition-all duration-500 h-full flex flex-col",
-                      isDark
-                        ? "bg-white/[0.04] border border-white/[0.08] hover:border-primary/30 hover:bg-white/[0.06]"
-                        : "bg-white border border-[#0a1a4f]/[0.06] hover:border-primary/20 hover:shadow-lg shadow-sm",
-                    )}
-                  >
-                    {/* Product Image */}
-                    <div className="relative aspect-square overflow-hidden">
-                      <LazyImage
-                        src={product.image}
-                        alt={t(product.name)}
-                        fill
-                        className="object-cover transition-transform duration-700 group-hover:scale-110"
-                      />
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-                    </div>
-
-                    {/* Product Info */}
-                    <div className="p-5 flex-1 flex flex-col justify-between">
-                      <h4
-                        className={cn(
-                          "font-semibold text-sm md:text-base mb-3 line-clamp-2",
-                          isDark ? "text-white" : "text-[#0a1a4f]",
-                        )}
-                      >
-                        {t(product.name)}
-                      </h4>
-                      {product.detailUrl && (
-                        <a
-                          href={product.detailUrl}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className={cn(
-                            "inline-flex items-center gap-1.5 text-xs font-medium transition-colors",
-                            "text-primary hover:text-primary/80",
-                          )}
-                        >
-                          {isRTL ? "عرض التفاصيل" : "View Details"}
-                          <ExternalLink className="w-3 h-3" />
-                        </a>
-                      )}
-                    </div>
-                  </div>
-                </motion.div>
+                <PartnerProductCard
+                  key={`${partner.slug}-${index}`}
+                  product={product}
+                  index={index}
+                  language={language}
+                  isDark={isDark}
+                />
               ))}
             </div>
 
