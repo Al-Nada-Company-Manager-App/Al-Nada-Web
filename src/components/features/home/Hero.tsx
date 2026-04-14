@@ -2,16 +2,16 @@
 
 import React, { useRef, useState, useEffect } from "react";
 import { motion } from "framer-motion";
-import { twMerge } from "tailwind-merge";
 import Image from "next/image";
 import Link from "next/link";
 import { useLanguage } from "@/hooks/use-language";
 import { Button } from "@/components/ui/button";
 import { useTheme } from "next-themes";
 import { cn } from "@/lib/utils";
-import { HERO_CONTENT, HERO_STATS, HERO_IMAGES } from "@/constants/hero";
+import { HERO_CONTENT, HERO_STATS } from "@/constants/hero";
 
 import { HeroCards } from "@/components/features/home/HeroCards";
+import { Marquee } from "@/components/ui/Marquee";
 
 export function Hero() {
   const { language } = useLanguage();
@@ -26,11 +26,15 @@ export function Hero() {
   const t = language === "en" ? HERO_CONTENT.en : HERO_CONTENT.ar;
   const isRTL = language === "ar";
   const isDark = mounted ? resolvedTheme === "dark" : true;
+  const customerLogos = Array.from({ length: 15 }, (_, index) => ({
+    src: `/img/customers/${index + 1}.jpg`,
+    alt: `Customer logo ${index + 1}`,
+  }));
 
   return (
     <section
       className={cn(
-        "relative grid min-h-[100svh] w-full place-content-center overflow-hidden transition-colors duration-500",
+        "relative grid min-h-[100svh] w-full place-content-center overflow-hidden transition-colors duration-500 pt-28",
         isDark
           ? "bg-[#060f2e]"
           : "bg-gradient-to-br from-[#f0f6ff] via-[#e8f0fe] to-[#dde8f8]",
@@ -67,39 +71,35 @@ export function Hero() {
       )}
 
       {/* Background Large Text */}
-      <h2
-        className={cn(
-          "relative z-0 text-[18vw] md:text-[200px] font-black select-none transition-colors duration-300 leading-none",
-          isDark ? "text-white/[0.06]" : "text-[#0a1a4f]/[0.04]",
-        )}
-      >
-        {t.bgText}
-        <span className="text-primary">.</span>
-      </h2>
-
-      {/* Draggable Cards Layer — Hidden on mobile/tablet for clean UX */}
-      <div
-        ref={containerRef}
-        className="absolute inset-0 z-10 pointer-events-none hidden xl:block"
-      >
-        <HeroCards isDark={isDark} containerRef={containerRef} />
-      </div>
-
-      {/* Content Overlay */}
-      <div className="absolute inset-0 z-20 flex flex-col items-center justify-center pointer-events-none">
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7, ease: "easeOut" as const }}
+      <div className="absolute inset-0 z-[1] flex items-center justify-center pointer-events-none">
+        <h2
           className={cn(
-            "container relative flex flex-col items-center text-center pointer-events-auto max-w-4xl mx-4 transition-all duration-500",
-            "p-6 md:p-10 rounded-3xl border shadow-2xl backdrop-blur-md xl:backdrop-blur-xl mt-16 md:mt-0",
-            isDark
-              ? "bg-[#060f2e]/70 border-white/10 shadow-black/30"
-              : "bg-white/70 border-[#d6e6ff]/80 shadow-primary/5",
-            isRTL && "rtl",
+            "text-[18vw] md:text-[200px] font-black select-none transition-colors duration-300 leading-none text-center",
+            isDark ? "text-white/[0.06]" : "text-[#0a1a4f]/[0.04]",
           )}
         >
+          {t.bgText}
+          <span className="text-primary">.</span>
+        </h2>
+      </div>
+
+      {/* Content + Draggable Area */}
+      <div className="relative z-20 w-full">
+        <div className="container max-w-7xl mx-auto px-4 md:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-[1.1fr_0.9fr] gap-10 lg:gap-14 items-center">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.7, ease: "easeOut" as const }}
+              className={cn(
+                "relative flex flex-col items-center lg:items-start text-center lg:text-left pointer-events-auto transition-all duration-500",
+                "p-6 md:p-10 rounded-3xl border shadow-2xl backdrop-blur-md xl:backdrop-blur-xl",
+                isDark
+                  ? "bg-[#060f2e]/70 border-white/10 shadow-black/30"
+                  : "bg-white/70 border-[#d6e6ff]/80 shadow-primary/5",
+                isRTL && "rtl",
+              )}
+            >
           {/* Badge */}
           <motion.span
             initial={{ opacity: 0, y: -10 }}
@@ -137,7 +137,7 @@ export function Hero() {
           >
             {t.description}
           </p>
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-3 w-full sm:w-auto">
+          <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-3 w-full sm:w-auto">
             <Button
               asChild
               size="lg"
@@ -156,7 +156,7 @@ export function Hero() {
                   : "border-[#d6e6ff] bg-white/50 text-[#0a1a4f] hover:bg-white/80 hover:border-primary/40",
               )}
             >
-              <Link href="#contact">{t.secondaryCta}</Link>
+              <Link href="/contact">{t.secondaryCta}</Link>
             </Button>
           </div>
 
@@ -183,7 +183,74 @@ export function Hero() {
               </div>
             ))}
           </div>
-        </motion.div>
+
+            </motion.div>
+
+            {/* Draggable Cards Container - Hidden on mobile/tablet */}
+            <div className="hidden lg:block">
+              <div
+                ref={containerRef}
+                className={cn(
+                  "relative h-[520px] xl:h-[600px] w-full rounded-3xl border overflow-hidden",
+                  isDark
+                    ? "border-white/10 bg-[#060f2e]/40"
+                    : "border-[#d6e6ff]/80 bg-white/60",
+                )}
+              >
+                <HeroCards isDark={isDark} containerRef={containerRef} />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Customers marquee */}
+      <div className="relative z-20 w-full pb-10">
+        <div className="container max-w-7xl mx-auto px-4 md:px-8">
+          <div className={cn("mt-10", isRTL && "rtl")}
+          >
+            <p
+              className={cn(
+                "text-xs font-semibold uppercase tracking-wider",
+                isDark ? "text-gray-400" : "text-[#4a6fa5]",
+              )}
+            >
+              {language === "en" ? "Our Customers" : "عملاؤنا"}
+            </p>
+            <div
+              className={cn(
+                "mt-3 rounded-2xl border overflow-hidden",
+                isDark
+                  ? "border-white/10 bg-white/5"
+                  : "border-[#d6e6ff]/80 bg-white/60",
+              )}
+            >
+              <Marquee
+                pauseOnHover
+                reverse={isRTL}
+                className="py-2 [--duration:30s] [--gap:1rem]"
+              >
+                {customerLogos.map((logo) => (
+                  <div
+                    key={logo.src}
+                    className={cn(
+                      "flex items-center justify-center rounded-xl px-6 py-3 shrink-0",
+                      isDark ? "bg-white/5" : "bg-white",
+                    )}
+                  >
+                    <Image
+                      src={logo.src}
+                      alt={logo.alt}
+                      width={160}
+                      height={80}
+                      className="h-16 w-auto object-contain"
+                    />
+                  </div>
+                ))}
+              </Marquee>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
   );
