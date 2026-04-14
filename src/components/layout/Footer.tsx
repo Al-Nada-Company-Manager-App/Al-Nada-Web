@@ -39,10 +39,7 @@ export function Footer() {
         {/* Brand */}
         <div className="space-y-4">
           <div
-            className={cn(
-              "flex items-center gap-3",
-              language === "ar" && "flex-row-reverse justify-end",
-            )}
+            className="flex items-center gap-3"
           >
             <div className="relative w-18 h-18 rounded-full overflow-hidden border-2 border-primary/20 shrink-0 bg-white dark:bg-transparent">
               {mounted && (
@@ -68,10 +65,7 @@ export function Footer() {
               : "نقدم حلولاً بيئية وعلمية متكاملة منذ عام 2012."}
           </p>
           <div
-            className={cn(
-              "flex gap-3",
-              language === "ar" && "justify-start", // Flex direction might need handling if RTL doesn't handle it naturally
-            )}
+            className="flex gap-3"
           >
             {[
               {
@@ -125,16 +119,10 @@ export function Footer() {
               <li key={link.href}>
                 <Link
                   href={link.href}
-                  className={cn(
-                    "text-muted-foreground hover:text-primary transition-colors flex items-center gap-2 group",
-                    language === "ar" && "flex-row-reverse",
-                  )}
+                  className="text-muted-foreground hover:text-primary transition-colors flex items-center gap-2 group"
                 >
                   <span
-                    className={cn(
-                      "w-1.5 h-1.5 rounded-full bg-primary/40 group-hover:bg-primary group-hover:w-3 transition-all",
-                      language === "ar" && "ml-2",
-                    )}
+                    className="w-1.5 h-1.5 rounded-full bg-primary/40 group-hover:bg-primary group-hover:w-3 transition-all"
                   />
                   {language === "en" ? link.label.en : link.label.ar}
                 </Link>
@@ -170,17 +158,10 @@ export function Footer() {
               <li key={idx}>
                 <Link
                   href={link.href}
-                  className={cn(
-                    "text-muted-foreground hover:text-primary transition-colors flex items-center gap-2 group",
-                    language === "ar" && "flex-row-reverse",
-                  )}
+                  className="text-muted-foreground hover:text-primary transition-colors flex items-center gap-2 group"
                 >
                   <ArrowRight
-                    className={cn(
-                      "w-4 h-4 opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all text-primary",
-                      language === "ar" &&
-                        "rotate-180 translate-x-2 group-hover:-translate-x-0",
-                    )}
+                    className="w-4 h-4 opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all text-primary rtl:rotate-180 rtl:translate-x-2 rtl:group-hover:translate-x-0"
                   />
                   {language === "en" ? link.label.en : link.label.ar}
                 </Link>
@@ -202,10 +183,7 @@ export function Footer() {
           </h3>
           <ul className="space-y-4 text-sm">
             <li
-              className={cn(
-                "flex items-start gap-3 text-muted-foreground group",
-                language === "ar" && "flex-row-reverse",
-              )}
+              className="flex items-start gap-3 text-muted-foreground group"
             >
               <div className="p-2 rounded-full bg-primary/10 text-primary group-hover:bg-primary group-hover:text-primary-foreground transition-colors shrink-0">
                 <MapPin className="w-4 h-4" />
@@ -215,10 +193,7 @@ export function Footer() {
               </span>
             </li>
             <li
-              className={cn(
-                "flex items-center gap-3 text-muted-foreground group",
-                language === "ar" && "flex-row-reverse",
-              )}
+              className="flex items-center gap-3 text-muted-foreground group"
             >
               <div className="p-2 rounded-full bg-primary/10 text-primary group-hover:bg-primary group-hover:text-primary-foreground transition-colors shrink-0">
                 <Phone className="w-4 h-4" />
@@ -231,10 +206,7 @@ export function Footer() {
               </span>
             </li>
             <li
-              className={cn(
-                "flex items-center gap-3 text-muted-foreground group",
-                language === "ar" && "flex-row-reverse",
-              )}
+              className="flex items-center gap-3 text-muted-foreground group"
             >
               <div className="p-2 rounded-full bg-primary/10 text-primary group-hover:bg-primary group-hover:text-primary-foreground transition-colors shrink-0">
                 <Mail className="w-4 h-4" />
@@ -247,7 +219,12 @@ export function Footer() {
         </div>
       </div>
 
-      <div className="max-w-7xl mx-auto mt-16 pt-8 border-t border-border/40 flex flex-col md:flex-row items-center justify-center md:justify-between gap-4 text-sm text-muted-foreground">
+      <div
+        className={cn(
+          "max-w-7xl mx-auto mt-16 pt-8 border-t border-border/40 flex flex-col md:flex-row items-center justify-center md:justify-between gap-4 text-sm text-muted-foreground",
+          language === "ar" && "rtl",
+        )}
+      >
         <p>
           © {new Date().getFullYear()}{" "}
           {language === "en"

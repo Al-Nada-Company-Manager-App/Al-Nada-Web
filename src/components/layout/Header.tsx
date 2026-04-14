@@ -53,6 +53,23 @@ export function Header() {
           language === "ar" ? "flex-row-reverse" : "flex-row",
         )}
       >
+        {/* Explore Products Button (left side, or right in RTL) */}
+        <div
+          className={cn(
+            "absolute hidden md:flex items-center",
+            language === "ar"
+              ? "right-6 lg:right-8"
+              : "left-6 lg:left-8",
+          )}
+        >
+          <Link
+            href="/products"
+            className="inline-flex items-center justify-center px-5 py-2 rounded-full font-bold text-sm transition-all border-2 border-primary/30 text-primary hover:bg-primary hover:text-white hover:border-primary hover:-translate-y-0.5 shadow-sm hover:shadow-lg hover:shadow-primary/25"
+          >
+            {language === "en" ? "Explore Products" : "استكشف المنتجات"}
+          </Link>
+        </div>
+
         {/* Centered Navigation Group */}
         <div
           className={cn(
