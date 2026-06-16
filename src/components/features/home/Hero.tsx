@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useRef, useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
@@ -10,14 +10,13 @@ import { useTheme } from "next-themes";
 import { cn } from "@/lib/utils";
 import { HERO_CONTENT, HERO_STATS } from "@/constants/hero";
 
-import { HeroCards } from "@/components/features/home/HeroCards";
+import { HeroGallery } from "@/components/features/home/HeroGallery";
 import { Marquee } from "@/components/ui/Marquee";
 
 export function Hero() {
   const { language } = useLanguage();
   const { resolvedTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
-  const containerRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     setMounted(true);
@@ -186,10 +185,9 @@ export function Hero() {
 
             </motion.div>
 
-            {/* Draggable Cards Container - Hidden on mobile/tablet */}
+            {/* Lightweight Image Gallery - Hidden on mobile/tablet */}
             <div className="hidden lg:block">
               <div
-                ref={containerRef}
                 className={cn(
                   "relative h-[520px] xl:h-[600px] w-full rounded-3xl border overflow-hidden",
                   isDark
@@ -197,7 +195,7 @@ export function Hero() {
                     : "border-[#d6e6ff]/80 bg-white/60",
                 )}
               >
-                <HeroCards isDark={isDark} containerRef={containerRef} />
+                <HeroGallery isDark={isDark} />
               </div>
             </div>
           </div>
