@@ -1,6 +1,7 @@
 "use client";
 
-import { useState, type FormEvent } from "react";
+import { useState, useEffect, type FormEvent } from "react";
+import { useSearchParams } from "next/navigation";
 import { motion } from "framer-motion";
 import { cn } from "@/lib/utils";
 import { Send, CheckCircle, AlertCircle, Loader2 } from "lucide-react";
@@ -15,6 +16,8 @@ interface ContactFormMapProps {
   isDark: boolean;
   isRTL: boolean;
 }
+
+import { Suspense } from "react";
 
 export function ContactFormMap({
   language,
@@ -39,7 +42,9 @@ export function ContactFormMap({
             viewport={{ once: true }}
             transition={{ duration: 0.7 }}
           >
-            <ContactFormInner language={language} isDark={isDark} />
+            <Suspense fallback={<div className="h-[500px] w-full rounded-2xl bg-white/5 animate-pulse" />}>
+              <ContactFormInner language={language} isDark={isDark} />
+            </Suspense>
           </motion.div>
 
           {/* Map */}
@@ -90,6 +95,15 @@ function ContactFormInner({
   const [status, setStatus] = useState<
     "idle" | "loading" | "success" | "error"
   >("idle");
+  const searchParams = useSearchParams();
+  const [defaultSubject, setDefaultSubject] = useState("");
+
+  useEffect(() => {
+    const subjectParam = searchParams.get("subject");
+    if (subjectParam) {
+      setDefaultSubject(subjectParam);
+    }
+  }, [searchParams]);
 
   async function handleSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
@@ -162,6 +176,7 @@ function ContactFormInner({
             type="text"
             name="name"
             required
+            dir="auto"
             placeholder={form.namePlaceholder}
             className={inputClasses}
           />
@@ -169,15 +184,26 @@ function ContactFormInner({
             type="email"
             name="email"
             required
+            dir="auto"
             placeholder={form.emailPlaceholder}
             className={inputClasses}
           />
         </div>
 
         <input
+          type="tel"
+          name="phone"
+          dir="auto"
+          placeholder={form.phonePlaceholder}
+          className={inputClasses}
+        />
+
+        <input
           type="text"
           name="subject"
           required
+          dir="auto"
+          defaultValue={defaultSubject}
           placeholder={form.subjectPlaceholder}
           className={inputClasses}
         />
@@ -185,6 +211,7 @@ function ContactFormInner({
         <textarea
           name="message"
           required
+          dir="auto"
           rows={5}
           placeholder={form.messagePlaceholder}
           className={cn(inputClasses, "resize-none")}

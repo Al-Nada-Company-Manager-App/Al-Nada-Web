@@ -3,7 +3,7 @@
 import { motion } from "framer-motion";
 import { cn } from "@/lib/utils";
 import { LazyImage } from "@/components/ui/LazyImage";
-import { ExternalLink } from "lucide-react";
+import { ExternalLink, FileText } from "lucide-react";
 import type { PartnerProduct } from "@/constants/partner-details";
 
 interface PartnerProductCardProps {
@@ -48,9 +48,9 @@ export function PartnerProductCard({
           />
           <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
 
-          {/* Hover overlay with detail link */}
-          {product.detailUrl && (
-            <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-500">
+          {/* Hover overlay with buttons */}
+          <div className="absolute inset-0 flex flex-col items-center justify-center gap-3 opacity-0 group-hover:opacity-100 transition-all duration-500 z-10">
+            {product.detailUrl && (
               <a
                 href={product.detailUrl}
                 target="_blank"
@@ -64,8 +64,20 @@ export function PartnerProductCard({
                 {isRTL ? "عرض التفاصيل" : "View Details"}
                 <ExternalLink className="w-3.5 h-3.5" />
               </a>
-            </div>
-          )}
+            )}
+            
+            <a
+              href={`/contact?subject=${encodeURIComponent(isRTL ? `طلب تسعير: ${name}` : `Quote Request: ${name}`)}`}
+              className={cn(
+                "flex items-center gap-2 px-5 py-2.5 rounded-full text-xs font-semibold transition-all duration-300",
+                "bg-primary text-white hover:bg-primary/90 shadow-lg",
+                "transform translate-y-4 group-hover:translate-y-0",
+              )}
+            >
+              {isRTL ? "طلب تسعير" : "Request Quote"}
+              <FileText className="w-3.5 h-3.5" />
+            </a>
+          </div>
         </div>
 
         {/* Product Info */}
