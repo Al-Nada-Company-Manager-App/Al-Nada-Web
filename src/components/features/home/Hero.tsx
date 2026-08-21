@@ -213,7 +213,7 @@ export function Hero() {
                     : "border-[#d6e6ff]/80 bg-white/60",
                 )}
               >
-                <HeroGallery isDark={isDark} compact={false} />
+                <HeroGallery isDark={isDark} />
               </div>
             </div>
           </div>
@@ -228,7 +228,7 @@ export function Hero() {
                   : "border-[#d6e6ff]/80 bg-white/60",
               )}
             >
-              <HeroGallery isDark={isDark} compact={true} />
+              <HeroGallery isDark={isDark} />
             </div>
           </div>
         </div>
