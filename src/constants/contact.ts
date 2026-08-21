@@ -75,7 +75,7 @@ export const CONTACT_FORM_CONTENT = {
   },
 } as const;
 
-export const FORMSPREE_ENDPOINT = "https://formspree.io/f/mjvnypok";
+export const BACKEND_CONTACT_ENDPOINT = process.env.NEXT_PUBLIC_CONTACT_API_URL || "https://al-nada-web-backend.vercel.app/api/contact";
 
 export const GOOGLE_MAPS_EMBED_URL =
   "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3452.0000432516954!2d31.3023327!3d30.094185099999994!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14584041eaaaaaab%3A0xa1182256c0f53365!2sAl%20Nada%20Scientific%20Office!5e0!3m2!1sen!2seg!4v1706887706711!5m2!1sen!2seg";

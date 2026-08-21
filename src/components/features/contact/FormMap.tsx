@@ -6,7 +6,7 @@ import { cn } from "@/lib/utils";
 import { Send, CheckCircle, AlertCircle, Loader2 } from "lucide-react";
 import {
   CONTACT_FORM_CONTENT,
-  FORMSPREE_ENDPOINT,
+  BACKEND_CONTACT_ENDPOINT,
   GOOGLE_MAPS_EMBED_URL,
 } from "@/constants/contact";
 
@@ -96,12 +96,16 @@ function ContactFormInner({
     setStatus("loading");
 
     const data = new FormData(e.currentTarget);
+    const payload = Object.fromEntries(data.entries());
 
     try {
-      const response = await fetch(FORMSPREE_ENDPOINT, {
+      const response = await fetch(BACKEND_CONTACT_ENDPOINT, {
         method: "POST",
-        body: data,
-        headers: { Accept: "application/json" },
+        body: JSON.stringify(payload),
+        headers: { 
+          "Content-Type": "application/json",
+          "Accept": "application/json" 
+        },
       });
 
       if (response.ok) {
@@ -163,7 +167,7 @@ function ContactFormInner({
           />
           <input
             type="email"
-            name="_replyto"
+            name="email"
             required
             placeholder={form.emailPlaceholder}
             className={inputClasses}
