@@ -124,7 +124,12 @@ function ContactFormInner({
 
       if (response.ok) {
         setStatus("success");
-        (e.target as HTMLFormElement).reset();
+        const formEl = e.target as HTMLFormElement;
+        formEl.reset();
+        // Force clear the subject input since reset() only restores defaultValue
+        const subjectInput = formEl.elements.namedItem("subject") as HTMLInputElement;
+        if (subjectInput) subjectInput.value = "";
+        setDefaultSubject("");
       } else {
         setStatus("error");
       }
