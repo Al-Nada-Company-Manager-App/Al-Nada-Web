@@ -12,6 +12,7 @@ import { ArrowLeft, ArrowRight } from "lucide-react";
 import { LazyImage } from "@/components/ui/LazyImage";
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
+import rehypeRaw from 'rehype-raw';
 
 export function SinglePost({ post }: { post: Post }) {
   const { language } = useLanguage();
@@ -123,7 +124,10 @@ export function SinglePost({ post }: { post: Post }) {
                   : "prose-p:text-[#4a6fa5] prose-headings:text-[#0a1a4f] prose-a:text-primary hover:prose-a:text-[#0a1a4f]"
               )}
             >
-              <ReactMarkdown remarkPlugins={[remarkGfm]}>
+              <ReactMarkdown 
+                remarkPlugins={[remarkGfm]} 
+                rehypePlugins={[rehypeRaw]}
+              >
                 {post.body}
               </ReactMarkdown>
             </div>
