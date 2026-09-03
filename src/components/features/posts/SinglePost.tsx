@@ -115,17 +115,18 @@ export function SinglePost({ post }: { post: Post }) {
               {post.title}
             </h1>
 
-            <ReactMarkdown
+            <div
               className={cn(
                 "prose prose-lg max-w-none transition-colors duration-300",
                 isDark
                   ? "prose-invert prose-p:text-gray-300 prose-headings:text-white prose-a:text-primary-light hover:prose-a:text-white"
                   : "prose-p:text-[#4a6fa5] prose-headings:text-[#0a1a4f] prose-a:text-primary hover:prose-a:text-[#0a1a4f]"
               )}
-              remarkPlugins={[remarkGfm]}
             >
-              {post.body}
-            </ReactMarkdown>
+              <ReactMarkdown remarkPlugins={[remarkGfm]}>
+                {post.body}
+              </ReactMarkdown>
+            </div>
 
             {post.image2Url && (
               <div className="mt-16 relative w-full h-[300px] md:h-[400px] rounded-2xl overflow-hidden shadow-lg shadow-black/10">

@@ -31,7 +31,15 @@ export function PostCard({
     }
   );
 
-  const excerpt = post.body.replace(/<[^>]+>/g, "").substring(0, 120) + "...";
+  // Strip basic markdown and HTML for the excerpt
+  const plainText = post.body
+    .replace(/<[^>]+>/g, '') // Strip HTML
+    .replace(/^#+\s+/gm, '') // Strip markdown headings
+    .replace(/\[([^\]]+)\]\([^\)]+\)/g, '$1') // Replace markdown links with just their text
+    .replace(/[*_~`>]/g, '') // Strip formatting characters
+    .replace(/\s+/g, ' ') // Collapse whitespace
+    .trim();
+  const excerpt = plainText.length > 120 ? plainText.substring(0, 120) + "..." : plainText;
 
   return (
     <motion.div
