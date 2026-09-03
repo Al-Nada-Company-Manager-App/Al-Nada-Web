@@ -47,7 +47,7 @@ export function SinglePost({ post }: { post: Post }) {
 
       <div
         className={cn(
-          "container max-w-4xl mx-auto px-4 md:px-8 relative",
+          "container max-w-7xl mx-auto px-4 md:px-8 relative",
           isRTL && "rtl"
         )}
       >
