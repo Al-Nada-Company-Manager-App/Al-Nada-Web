@@ -10,6 +10,8 @@ import { POSTS_CONTENT } from "@/constants/posts";
 import Link from "next/link";
 import { ArrowLeft, ArrowRight } from "lucide-react";
 import { LazyImage } from "@/components/ui/LazyImage";
+import ReactMarkdown from 'react-markdown';
+import remarkGfm from 'remark-gfm';
 
 export function SinglePost({ post }: { post: Post }) {
   const { language } = useLanguage();
@@ -47,7 +49,7 @@ export function SinglePost({ post }: { post: Post }) {
 
       <div
         className={cn(
-          "container max-w-7xl mx-auto px-4 md:px-8 relative",
+          "container max-w-5xl mx-auto px-4 md:px-8 relative",
           isRTL && "rtl"
         )}
       >
@@ -84,7 +86,7 @@ export function SinglePost({ post }: { post: Post }) {
           )}
         >
           {post.image1Url && (
-            <div className="relative w-full aspect-[2/1] overflow-hidden bg-gray-100 dark:bg-gray-800">
+            <div className="relative w-full h-[300px] md:h-[400px] overflow-hidden bg-gray-100 dark:bg-gray-800">
               <LazyImage
                 src={post.image1Url}
                 alt={post.title}
@@ -113,22 +115,24 @@ export function SinglePost({ post }: { post: Post }) {
               {post.title}
             </h1>
 
-            <div
+            <ReactMarkdown
               className={cn(
                 "prose prose-lg max-w-none transition-colors duration-300",
                 isDark
                   ? "prose-invert prose-p:text-gray-300 prose-headings:text-white prose-a:text-primary-light hover:prose-a:text-white"
                   : "prose-p:text-[#4a6fa5] prose-headings:text-[#0a1a4f] prose-a:text-primary hover:prose-a:text-[#0a1a4f]"
               )}
-              dangerouslySetInnerHTML={{ __html: post.body }}
-            />
+              remarkPlugins={[remarkGfm]}
+            >
+              {post.body}
+            </ReactMarkdown>
 
             {post.image2Url && (
-              <div className="mt-16 relative w-full rounded-2xl overflow-hidden shadow-lg shadow-black/10">
+              <div className="mt-16 relative w-full h-[300px] md:h-[400px] rounded-2xl overflow-hidden shadow-lg shadow-black/10">
                 <img
                   src={post.image2Url}
                   alt="Supplementary Material"
-                  className="w-full h-auto object-cover"
+                  className="w-full h-full object-cover"
                 />
               </div>
             )}
