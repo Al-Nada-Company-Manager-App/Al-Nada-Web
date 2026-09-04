@@ -118,8 +118,8 @@ export function Header() {
                   <Image
                     src={
                       currentTheme === "dark"
-                        ? "/img/alnadadr.png"
-                        : "/img/alnada.png"
+                        ? "/img/alnadadr.webp"
+                        : "/img/alnada.webp"
                     }
                     alt="Al Nada Logo"
                     fill

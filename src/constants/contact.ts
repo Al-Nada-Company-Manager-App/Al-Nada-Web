@@ -43,10 +43,10 @@ export const CONTACT_INFO_CARDS = [
     icon: "mail" as const,
     label: { en: "Mail Us Now", ar: "ارسل لنا الآن" },
     values: [
-      { en: "info@alnadascientific.com", ar: "info@alnadascientific.com" },
+      { en: "sales@alnadascientific.com", ar: "sales@alnadascientific.com" },
       { en: "nada.scientific@yahoo.com", ar: "nada.scientific@yahoo.com" },
     ],
-    href: "mailto:info@alnadascientific.com",
+    href: "mailto:sales@alnadascientific.com",
   },
 ] as const;
 

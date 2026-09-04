@@ -46,8 +46,8 @@ export function Footer() {
                 <Image
                   src={
                     currentTheme === "dark"
-                      ? "/img/alnadadr.png"
-                      : "/img/alnada.png"
+                      ? "/img/alnadadr.webp"
+                      : "/img/alnada.webp"
                   }
                   alt={language === "en" ? "Al Nada Logo" : "شعار الندى"}
                   fill
@@ -212,7 +212,7 @@ export function Footer() {
                 <Mail className="w-4 h-4" />
               </div>
               <span className="group-hover:text-foreground transition-colors">
-                info@alnadascientific.com
+                sales@alnadascientific.com
               </span>
             </li>
           </ul>

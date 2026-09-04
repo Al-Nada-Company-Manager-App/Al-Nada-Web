@@ -43,7 +43,7 @@ export function Hero() {
       {isDark && (
         <div className="absolute inset-0 z-0">
           <Image
-            src="/img/header-page.jpg"
+            src="/img/header-page.webp"
             alt="Background"
             fill
             className="object-cover opacity-20"

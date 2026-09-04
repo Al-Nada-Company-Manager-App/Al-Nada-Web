@@ -7,12 +7,12 @@ import { cn } from "@/lib/utils";
 const SLIDE_DURATION = 4000; // ms per slide
 
 const SLIDES = [
-  { src: "/img/Index/I1.jpg",  alt: "Fieldwork",  label: "Field Operations" },
-  { src: "/img/Index/I6.jpg",  alt: "Fieldwork",  label: "Field Operations" },
-  { src: "/img/Index/I2.jpg",  alt: "Lab Work",   label: "Lab Precision"    },
-  { src: "/img/Index/I8.jpg",  alt: "Equipment",  label: "Instruments"      },
-  { src: "/img/Index/I12.jpg", alt: "Device",     label: "Our Devices"      },
-  { src: "/img/Index/I14.jpg", alt: "Device",     label: "Our Devices"      },
+  { src: "/img/Index/I1.webp",  alt: "Fieldwork",  label: "Field Operations" },
+  { src: "/img/Index/I6.webp",  alt: "Fieldwork",  label: "Field Operations" },
+  { src: "/img/Index/I2.webp",  alt: "Lab Work",   label: "Lab Precision"    },
+  { src: "/img/Index/I8.webp",  alt: "Equipment",  label: "Instruments"      },
+  { src: "/img/Index/I12.webp", alt: "Device",     label: "Our Devices"      },
+  { src: "/img/Index/I14.webp", alt: "Device",     label: "Our Devices"      },
 ];
 
 interface HeroGalleryProps {

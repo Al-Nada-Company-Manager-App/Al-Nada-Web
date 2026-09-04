@@ -57,8 +57,8 @@ export const ABOUT_FEATURES = [
 ] as const;
 
 export const ABOUT_IMAGES = {
-  main: "/img/about/about-1.jpg",
-  secondary: "/img/about/about-2.jpg",
+  main: "/img/about/about-1.webp",
+  secondary: "/img/about/about-2.webp",
 } as const;
 
 export const ABOUT_PAGE_CONTENT = {
