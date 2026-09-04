@@ -76,17 +76,17 @@ export const PARTNER_DETAILS: Record<string, PartnerDetail> = {
     products: [
       {
         name: { en: 'Portable Flue Gas Analyzer', ar: 'Portable Flue Gas Analyzer' },
-        image: '/img/Companies and Products/Portable Flue Gas Analyzer.webp',
+        image: '/img/partners/portable-flue-gas-analyzer.webp',
         detailUrl: 'https://www.ecom.de/en/productcats/abgasanalyse/',
       },
       {
         name: { en: 'Fixed Gas Analyzer', ar: 'Fixed Gas Analyzer' },
-        image: '/img/Companies and Products/Fixed Continues Gas Analyzer.webp',
+        image: '/img/partners/fixed-gas-analyzer.webp',
         detailUrl: 'https://ecomusa.com/ecom-products/ecom-rack/',
       },
       {
         name: { en: 'Pressure Meters', ar: 'Pressure Meters' },
-        image: '/img/Companies and Products/Recording.webp',
+        image: '/img/partners/pressure-meters.webp',
         detailUrl: 'https://www.ecom.de/en/productcats/pressure-measurement/',
       },
     ],
@@ -159,37 +159,37 @@ export const PARTNER_DETAILS: Record<string, PartnerDetail> = {
     products: [
       {
         name: { en: 'Sound Level Meter', ar: 'Sound Level Meter' },
-        image: '/img/Companies and Products/Sound Level Meter1.webp',
+        image: '/img/partners/sound-level-meter.webp',
         detailUrl: '../EN/https://www.casellasolutions.com/categories/noisemonitoring1.html',
       },
       {
         name: { en: 'Sampling Pump', ar: 'Sampling Pump' },
-        image: '/img/Companies and Products/Sampling Pump.webp',
+        image: '/img/partners/sampling-pump.webp',
         detailUrl: '../EN/https://www.casellasolutions.com/uk/en/products/apex2-standard.html',
       },
       {
         name: { en: 'Personal Noise Dosimeter', ar: 'Personal Noise Dosimeter' },
-        image: '/img/Companies and Products/Personal Noise Dosimeter.webp',
+        image: '/img/partners/personal-noise-dosimeter.webp',
         detailUrl: '../EN/https://casellasolutions.com/uk/en/products/dbadge2-standard-single-kit.html',
       },
       {
         name: { en: 'Dust Meter', ar: 'Dust Meter' },
-        image: '/img/Companies and Products/Dust Meter.webp',
+        image: '/img/partners/dust-meter.webp',
         detailUrl: '../EN/https://www.casellasolutions.com/uk/en/products/cel-712-microdust-pro-kit.html',
       },
       {
         name: { en: 'Fixed (Sound – Dust - Vibration )', ar: 'Fixed (Sound – Dust - Vibration )' },
-        image: '/img/Companies and Products/Fixed (Sound –Dust ).webp',
+        image: '/img/partners/fixed-sound-dust-vibration.webp',
         detailUrl: '../EN/https://www.casellasolutions.com/categories/boundarymonitoring1.html',
       },
       {
         name: { en: 'Vibration Meter', ar: 'Vibration Meter' },
-        image: '/img/Companies and Products/Vibration Meter1.webp',
+        image: '/img/partners/vibration-meter.webp',
         detailUrl: '../EN/https://www.casellasolutions.com/categories/vibrationmonitoring1.html',
       },
       {
         name: { en: 'Sampling Accessory', ar: 'Sampling Accessory' },
-        image: '/img/Companies and Products/Sampling Accessory.webp',
+        image: '/img/partners/sampling-accessory.webp',
         detailUrl: '../EN/https://www.casellasolutions.com/uk/en/products/by-product/air-sampling-media/apex2/accessories.html',
       },
     ],
@@ -252,106 +252,106 @@ export const PARTNER_DETAILS: Record<string, PartnerDetail> = {
     products: [
       {
         name: { en: 'Portable Air Quality Monitor', ar: 'Portable Air Quality Monitor' },
-        image: '/img/Companies and Products/Portable Air Quality Monitor.webp',
+        image: '/img/partners/portable-air-quality-monitor.webp',
         detailUrl: 'https://www.aeroqual.com/products/s-series-portable-air-monitors/series-500-portable-air-pollution-monitor',
       },
       {
         name: { en: 'Portable Dust Monitor', ar: 'Portable Dust Monitor' },
-        image: '/img/Companies and Products/Portable Dust Monitor.webp',
+        image: '/img/partners/portable-dust-monitor.webp',
         detailUrl: 'https://www.aeroqual.com/products/ranger-portable-air-monitor/ranger-portable-dust-monitor',
       },
       {
         name: { en: 'Ambient Air Monitoring Station', ar: 'Ambient Air Monitoring Station' },
-        image: '/img/Companies and Products/aeroqual-aqm-65-with-integrated-calibration.webp',
+        image: '/img/partners/ambient-air-monitoring-station.webp',
         detailUrl: 'https://www.aeroqual.com/products/aqm-stations/aqm-65-air-quality-monitoring-station',
       },
       {
         name: { en: 'Dust Sentry', ar: 'Dust Sentry' },
-        image: '/img/Companies and Products/Dust Sentry.webp',
+        image: '/img/partners/dust-sentry.webp',
         detailUrl: 'https://www.aeroqual.com/particulate-dust-monitors/dust-sentry',
       },
       {
         name: { en: 'Air Quality Monitor', ar: 'Air Quality Monitor' },
-        image: '/img/Companies and Products/Air Quality Monitor.webp',
+        image: '/img/partners/air-quality-monitor.webp',
         detailUrl: 'https://www.aeroqual.com/products/aqs-mini-air-quality-stations/aqs-air-quality-monitor',
       },
       {
         name: { en: 'Outdoor Air Quality Test Kit (Starter)', ar: 'Outdoor Air Quality Test Kit (Starter)' },
-        image: '/img/Companies and Products/Outdoor Air Quality Test Kit (Starter).webp',
+        image: '/img/partners/outdoor-air-quality-test-kit-starter.webp',
         detailUrl: 'https://www.aeroqual.com/products/s-series-portable-air-monitors/outdoor-portable-monitor-starter-kit',
       },
       {
         name: { en: 'Indoor Air Quality Test Kit for WELL', ar: 'Indoor Air Quality Test Kit for WELL' },
-        image: '/img/Companies and Products/Indoor Air Quality Test Kit for WELL.webp',
+        image: '/img/partners/indoor-air-quality-test-kit-for-well.webp',
         detailUrl: 'https://www.aeroqual.com/products/ranger-portable-air-monitor/indoor-portable-monitor-well-compliance-kit',
       },
       {
         name: { en: 'Ammonia Sensor 0-100ppm', ar: 'Ammonia Sensor 0-100ppm' },
-        image: '/img/Companies and Products/Ammonia Sensor 0-100ppm.webp',
+        image: '/img/partners/ammonia-sensor-0-100ppm.webp',
         detailUrl: 'https://www.aeroqual.com/products/sensors',
       },
       {
         name: { en: 'Ammonia Sensor 0-1000ppm', ar: 'Ammonia Sensor 0-1000ppm' },
-        image: '/img/Companies and Products/Ammonia Sensor 0-1000ppm.webp',
+        image: '/img/partners/ammonia-sensor-0-1000ppm.webp',
         detailUrl: 'https://www.aeroqual.com/products/sensors',
       },
       {
         name: { en: 'Carbon Dioxide Detector 0-2000ppm', ar: 'Carbon Dioxide Detector 0-2000ppm' },
-        image: '/img/Companies and Products/Carbon Dioxide Detector 0-2000ppm.webp',
+        image: '/img/partners/carbon-dioxide-detector-0-2000ppm.webp',
         detailUrl: 'https://www.aeroqual.com/products/sensors',
       },
       {
         name: { en: 'CO2 Detector 0-5000ppm', ar: 'CO2 Detector 0-5000ppm' },
-        image: '/img/Companies and Products/CO2 Detector 0-5000ppm.webp',
+        image: '/img/partners/co2-detector-0-5000ppm.webp',
         detailUrl: 'https://www.aeroqual.com/products/sensors',
       },
       {
         name: { en: 'Carbon Monoxide Sensor 0-25ppm', ar: 'Carbon Monoxide Sensor 0-25ppm' },
-        image: '/img/Companies and Products/Carbon Monoxide Sensor 0-25ppm.webp',
+        image: '/img/partners/carbon-monoxide-sensor-0-25ppm.webp',
         detailUrl: 'https://www.aeroqual.com/products/sensors',
       },
       {
         name: { en: 'Carbon Monoxide Sensor 0-100ppm', ar: 'Carbon Monoxide Sensor 0-100ppm' },
-        image: '/img/Companies and Products/Carbon Monoxide Sensor 0-100ppm.webp',
+        image: '/img/partners/carbon-monoxide-sensor-0-100ppm.webp',
         detailUrl: 'https://www.aeroqual.com/products/sensors',
       },
       {
         name: { en: 'Chlorine Sensor 0-10ppm', ar: 'Chlorine Sensor 0-10ppm' },
-        image: '/img/Companies and Products/Chlorine Sensor 0-10ppm.webp',
+        image: '/img/partners/chlorine-sensor-0-10ppm.webp',
         detailUrl: 'https://www.aeroqual.com/products/sensors',
       },
       {
         name: { en: 'Formaldehyde Sensor 0-10ppm', ar: 'Formaldehyde Sensor 0-10ppm' },
-        image: '/img/Companies and Products/Formaldehyde Sensor 0-10ppm.webp',
+        image: '/img/partners/formaldehyde-sensor-0-10ppm.webp',
         detailUrl: 'https://www.aeroqual.com/products/sensors',
       },
       {
         name: { en: 'Hydrogen Detector 0-5000ppm', ar: 'Hydrogen Detector 0-5000ppm' },
-        image: '/img/Companies and Products/Hydrogen Detector 0-5000ppm.webp',
+        image: '/img/partners/hydrogen-detector-0-5000ppm.webp',
         detailUrl: 'https://www.aeroqual.com/products/sensors',
       },
       {
         name: { en: 'Hydrogen-Sulfide-H2S-Sensor', ar: 'Hydrogen-Sulfide-H2S-Sensor' },
-        image: '/img/Companies and Products/Hydrogen-Sulfide-H2S-Sensor.webp',
+        image: '/img/partners/hydrogen-sulfide-h2s-sensor.webp',
         detailUrl: 'https://www.aeroqual.com/products/sensors',
       },
       {
         name: { en: 'VOC Sensor 0-500ppm', ar: 'VOC Sensor 0-500ppm' },
-        image: '/img/Companies and Products/VOC Sensor 0-500ppm.webp',
+        image: '/img/partners/voc-sensor-0-500ppm.webp',
       },
       {
         name: { en: 'Particulate Matter Sensor PM10 / PM2.5', ar: 'Particulate Matter Sensor PM10 / PM2.5' },
-        image: '/img/Companies and Products/Particulate Matter Sensor PM10 PM2.5.webp',
+        image: '/img/partners/particulate-matter-sensor-pm10-pm2-5.webp',
         detailUrl: 'https://www.aeroqual.com/products/sensors',
       },
       {
         name: { en: 'PID Sensor 0-30ppm', ar: 'PID Sensor 0-30ppm' },
-        image: '/img/Companies and Products/PID Sensor 0-30ppm.webp',
+        image: '/img/partners/pid-sensor-0-30ppm.webp',
         detailUrl: 'https://www.aeroqual.com/products/sensors',
       },
       {
         name: { en: 'Sulfur Dioxide Sensor', ar: 'Sulfur Dioxide Sensor' },
-        image: '/img/Companies and Products/Sulfur Dioxide Sensor.webp',
+        image: '/img/partners/sulfur-dioxide-sensor.webp',
         detailUrl: 'https://www.aeroqual.com/products/sensors',
       },
     ],
@@ -412,12 +412,12 @@ export const PARTNER_DETAILS: Record<string, PartnerDetail> = {
     products: [
       {
         name: { en: 'Indoor Air Quality Monitor', ar: 'Indoor Air Quality Monitor' },
-        image: '/img/Companies and Products/indoor air quality monitor.webp',
+        image: '/img/partners/indoor-air-quality-monitor.webp',
         detailUrl: 'https://www.critical-environment.com/products/indoor-air-quality-monitors',
       },
       {
         name: { en: 'cGas', ar: 'cGas' },
-        image: '/img/Companies and Products/MixCollage-05-Feb-2024-01-14-PM-7930.webp',
+        image: '/img/partners/cgas.webp',
         detailUrl: 'https://www.critical-environment.com/products/gas-detectors',
       },
     ],
@@ -486,62 +486,62 @@ export const PARTNER_DETAILS: Record<string, PartnerDetail> = {
     products: [
       {
         name: { en: 'Air Velocity Meter', ar: 'Air Velocity Meter' },
-        image: '/img/Companies and Products/air velocity meter.webp',
+        image: '/img/partners/air-velocity-meter.webp',
         detailUrl: 'https://www.tenmars.com/m/2000-1682-19124.php?Lang=en',
       },
       {
         name: { en: 'Radiation Monitor', ar: 'Radiation Monitor' },
-        image: '/img/Companies and Products/Radiation Monitor.webp',
+        image: '/img/partners/radiation-monitor.webp',
         detailUrl: 'https://www.tenmars.com/m/2000-1682-19123.php?Lang=en',
       },
       {
         name: { en: 'Light Meter', ar: 'Light Meter' },
-        image: '/img/Companies and Products/Light Meter.webp',
+        image: '/img/partners/light-meter.webp',
         detailUrl: 'https://www.tenmars.com/m/2000-1682-19126.php?Lang=en',
       },
       {
         name: { en: 'Sound Level Meter', ar: 'Sound Level Meter' },
-        image: '/img/Companies and Products/Sound Level Meter.webp',
+        image: '/img/partners/sound-level-meter-1.webp',
         detailUrl: 'https://www.tenmars.com/m/2000-1682-19586.php?Lang=en',
       },
       {
         name: { en: 'Heat Stress WBGT Meter', ar: 'Heat Stress WBGT Meter' },
-        image: '/img/Companies and Products/HEAT STRESS WBGT METER.webp',
+        image: '/img/partners/heat-stress-wbgt-meter.webp',
         detailUrl: 'https://www.tenmars.com/m/2000-1682-20496.php?Lang=en',
       },
       {
         name: { en: 'Thermometer', ar: 'Thermometer' },
-        image: '/img/Companies and Products/Thermometer.webp',
+        image: '/img/partners/thermometer.webp',
         detailUrl: 'https://www.tenmars.com/m/2000-1682-19127.php?Lang=en',
       },
       {
         name: { en: 'Carbon Monoxide Meter', ar: 'Carbon Monoxide Meter' },
-        image: '/img/Companies and Products/Carbon Monoxide Meter.webp',
+        image: '/img/partners/carbon-monoxide-meter.webp',
         detailUrl: 'https://www.tenmars.com/m/2000-1682-19119.php?Lang=en',
       },
       {
         name: { en: 'Air Quality (IAQ) Monitor', ar: 'Air Quality (IAQ) Monitor' },
-        image: '/img/Companies and Products/Air Quality (IAQ) Monitor.webp',
+        image: '/img/partners/air-quality-iaq-monitor.webp',
         detailUrl: 'https://www.tenmars.com/m/2000-1682-19120.php?Lang=en',
       },
       {
         name: { en: 'Vibration Meter', ar: 'Vibration Meter' },
-        image: '/img/Companies and Products/Vibration Meter.webp',
+        image: '/img/partners/vibration-meter-1.webp',
         detailUrl: 'https://www.tenmars.com/m/2000-1682-19139.php?Lang=en',
       },
       {
         name: { en: 'Hot Wire Anemometer', ar: 'Hot Wire Anemometer' },
-        image: '/img/Companies and Products/Hot Wire Anemometer.webp',
+        image: '/img/partners/hot-wire-anemometer.webp',
         detailUrl: 'https://www.tenmars.com/m/2001-1682-689935-1.php?Lang=en',
       },
       {
         name: { en: '3 - Axis RF Field Strength Meter', ar: '3 - Axis RF Field Strength Meter' },
-        image: '/img/Companies and Products/3 - Axis RF Field Strength Meter.webp',
+        image: '/img/partners/3-axis-rf-field-strength-meter.webp',
         detailUrl: 'https://www.tenmars.com/m/2000-1682-19121.php?Lang=en',
       },
       {
         name: { en: 'Tacho Meter', ar: 'Tacho Meter' },
-        image: '/img/Companies and Products/Tacho Meter.webp',
+        image: '/img/partners/tacho-meter.webp',
         detailUrl: 'https://www.tenmars.com/m/2001-1682-689922-1.php?Lang=en',
       },
     ],
@@ -610,47 +610,47 @@ export const PARTNER_DETAILS: Record<string, PartnerDetail> = {
     products: [
       {
         name: { en: 'Indoor Air Quality Meter', ar: 'Indoor Air Quality Meter' },
-        image: '/img/Companies and Products/Indoor Air Quality Meter11.webp',
+        image: '/img/partners/indoor-air-quality-meter.webp',
         detailUrl: 'https://perfectprime.com/products/aq9600',
       },
       {
         name: { en: 'Air Pressure Manometer', ar: 'Air Pressure Manometer' },
-        image: '/img/Companies and Products/Air Pressure Manometer.webp',
+        image: '/img/partners/air-pressure-manometer.webp',
         detailUrl: 'https://perfectprime.com/collections/air-quality-meter-1',
       },
       {
         name: { en: 'Digital Manometer Air Pressure Gauge', ar: 'Digital Manometer Air Pressure Gauge' },
-        image: '/img/Companies and Products/Digital Manometer Air Pressure Gauge.webp',
+        image: '/img/partners/digital-manometer-air-pressure-gauge.webp',
         detailUrl: 'https://perfectprime.com/products/ar1895',
       },
       {
         name: { en: 'Anemometer', ar: 'Anemometer' },
-        image: '/img/Companies and Products/Anemometer.webp',
+        image: '/img/partners/anemometer.webp',
         detailUrl: 'https://perfectprime.com/products/wd9819',
       },
       {
         name: { en: '4 Channels Thermocouple Thermometer', ar: '4 Channels Thermocouple Thermometer' },
-        image: '/img/Companies and Products/4 Channels Thermocouple Thermometer.webp',
+        image: '/img/partners/4-channels-thermocouple-thermometer.webp',
         detailUrl: 'https://perfectprime.com/products/tc9815',
       },
       {
         name: { en: 'Light Meters', ar: 'Light Meters' },
-        image: '/img/Companies and Products/MixCollage-05-Feb-2024-01-37-PM-4205.webp',
+        image: '/img/partners/light-meters.webp',
         detailUrl: 'https://perfectprime.com/products/530-light-meter',
       },
       {
         name: { en: 'Microwave Oven Leakage Detector', ar: 'Microwave Oven Leakage Detector' },
-        image: '/img/Companies and Products/Microwave Oven Leakage Detector.webp',
+        image: '/img/partners/microwave-oven-leakage-detector.webp',
         detailUrl: 'https://perfectprime.com/products/mw0002',
       },
       {
         name: { en: 'Thermo Anemometer CFM/CMM', ar: 'Thermo Anemometer CFM/CMM' },
-        image: '/img/Companies and Products/Thermo Anemometer CFM CMM.webp',
+        image: '/img/partners/thermo-anemometer-cfm-cmm.webp',
         detailUrl: 'https://perfectprime.com/products/wd9819',
       },
       {
         name: { en: 'CO2 Meter', ar: 'CO2 Meter' },
-        image: '/img/Companies and Products/CO2 Home Use Meter.webp',
+        image: '/img/partners/co2-meter.webp',
         detailUrl: 'https://perfectprime.com/products/co2390',
       },
     ],
@@ -700,32 +700,32 @@ export const PARTNER_DETAILS: Record<string, PartnerDetail> = {
     products: [
       {
         name: { en: 'SGT Single Gas Detector (O2,C0,H2S,H2,SO2,NH3,NO2)', ar: 'SGT Single Gas Detector (O2,C0,H2S,H2,SO2,NH3,NO2)' },
-        image: '/img/Companies and Products/SGT.webp',
+        image: '/img/partners/sgt-single-gas-detector-o2-c0-h2s-h2-so2-nh3-no2.webp',
         detailUrl: 'https://www.senko-detection.com/sgt',
       },
       {
         name: { en: 'MGT Multi Gas Detector', ar: 'MGT Multi Gas Detector' },
-        image: '/img/Companies and Products/MGT.webp',
+        image: '/img/partners/mgt-multi-gas-detector.webp',
         detailUrl: 'https://www.senko-detection.com/mgt',
       },
       {
         name: { en: 'MGT-Pump', ar: 'MGT-Pump' },
-        image: '/img/Companies and Products/MGT-Pump.webp',
+        image: '/img/partners/mgt-pump.webp',
         detailUrl: 'https://www.senkoeu.com/products',
       },
       {
         name: { en: 'iGas Detector CO2 Single Gas Detector', ar: 'iGas Detector CO2 Single Gas Detector' },
-        image: '/img/Companies and Products/iGas.webp',
+        image: '/img/partners/igas-detector-co2-single-gas-detector.webp',
         detailUrl: 'https://www.senko-detection.com/igasdetector',
       },
       {
         name: { en: 'SP Secure Detector', ar: 'SP Secure Detector' },
-        image: '/img/Companies and Products/SP Secure Detector.webp',
+        image: '/img/partners/sp-secure-detector.webp',
         detailUrl: 'https://www.senkoeu.com/products',
       },
       {
         name: { en: 'Fixed Gas Detectors', ar: 'Fixed Gas Detectors' },
-        image: '/img/Companies and Products/MixCollage-05-Feb-2024-02-09-PM-5679.webp',
+        image: '/img/partners/fixed-gas-detectors.webp',
         detailUrl: 'https://www.senkoeu.com/products',
       },
     ],
@@ -775,12 +775,12 @@ export const PARTNER_DETAILS: Record<string, PartnerDetail> = {
     products: [
       {
         name: { en: 'RF analyzers', ar: 'RF analyzers' },
-        image: '/img/Companies and Products/MixCollage-05-Feb-2024-03-15-PM-6845.webp',
+        image: '/img/partners/rf-analyzers.webp',
         detailUrl: 'https://gigahertz-solutions.com/Measurement/High-Frequency',
       },
       {
         name: { en: 'LF analyzers', ar: 'LF analyzers' },
-        image: '/img/Companies and Products/MixCollage-05-Feb-2024-03-18-PM-6000.webp',
+        image: '/img/partners/lf-analyzers.webp',
         detailUrl: 'https://gigahertz-solutions.com/Measurement/Low-Frequency',
       },
     ],
@@ -835,27 +835,27 @@ export const PARTNER_DETAILS: Record<string, PartnerDetail> = {
     products: [
       {
         name: { en: 'Diesel smoke meter', ar: 'Diesel smoke meter' },
-        image: '/img/Companies and Products/Diesel smoke meter.webp',
+        image: '/img/partners/diesel-smoke-meter.webp',
         detailUrl: 'https://www.ten-automotive.nl/ten-aem-particle-counter',
       },
       {
         name: { en: 'Emission Analysers', ar: 'Emission Analysers' },
-        image: '/img/Companies and Products/innova-500-2.webp',
+        image: '/img/partners/emission-analysers.webp',
         detailUrl: 'https://www.ten-automotive.nl/gas-analysers',
       },
       {
         name: { en: 'Zero Emission', ar: 'Zero Emission' },
-        image: '/img/Companies and Products/Zero Emission.webp',
+        image: '/img/partners/zero-emission.webp',
         detailUrl: 'https://www.ten-automotive.nl/zero-emission-unit',
       },
       {
         name: { en: 'Multigas analyzer', ar: 'Multigas analyzer' },
-        image: '/img/Companies and Products/Multigas analyzer.webp',
+        image: '/img/partners/multigas-analyzer.webp',
         detailUrl: 'https://www.ten-automotive.nl/gas-analysers',
       },
       {
         name: { en: 'Brake tester', ar: 'Brake tester' },
-        image: '/img/Companies and Products/Brake tester.webp',
+        image: '/img/partners/brake-tester.webp',
         detailUrl: 'https://www.ten-automotive.nl/pti',
       },
     ],
@@ -911,47 +911,47 @@ export const PARTNER_DETAILS: Record<string, PartnerDetail> = {
     products: [
       {
         name: { en: 'Spectrophotometer', ar: 'Spectrophotometer' },
-        image: '/img/Companies and Products/xd7500_mb2_04.webp',
+        image: '/img/partners/spectrophotometer.webp',
         detailUrl: 'https://www.lovibond.com/en/PW/Water-Testing/Products/Lab-Portable-Instruments/XD-Spectrophotometers',
       },
       {
         name: { en: 'Digital COD System', ar: 'Digital COD System' },
-        image: '/img/Companies and Products/codsetup_md200_mb2_01.webp',
+        image: '/img/partners/digital-cod-system.webp',
         detailUrl: 'https://www.lovibond.com/en/PW/Water-Testing/Products/Lab-Portable-Instruments/ColorimetersPhotometers/COD-Set-Ups',
       },
       {
         name: { en: 'Photometers', ar: 'Photometers' },
-        image: '/img/Companies and Products/md100_cod_mb2_01.webp',
+        image: '/img/partners/photometers.webp',
         detailUrl: 'https://www.lovibond.com/en/PW/Water-Testing/Products/Lab-Portable-Instruments/ColorimetersPhotometers',
       },
       {
         name: { en: 'PH , Conductivity , DO', ar: 'PH , Conductivity , DO' },
-        image: '/img/Companies and Products/sd150_case_mb2_01.webp',
+        image: '/img/partners/ph-conductivity-do.webp',
         detailUrl: 'https://www.lovibond.com/en/PW/Water-Testing/Products/Lab-Portable-Instruments/Electrochemistry/Portable-Hand-held-Meters',
       },
       {
         name: { en: 'Turbidity', ar: 'Turbidity' },
-        image: '/img/Companies and Products/turbidity.webp',
+        image: '/img/partners/turbidity.webp',
         detailUrl: 'https://www.lovibond.com/en/PW/Water-Testing/Parameter/Parameter/Turbidity',
       },
       {
         name: { en: 'Incubators', ar: 'Incubators' },
-        image: '/img/Companies and Products/Incubators.webp',
+        image: '/img/partners/incubators.webp',
         detailUrl: 'https://www.lovibond.com/en/PW/Water-Testing/Products/Incubators-Reactors',
       },
       {
         name: { en: 'Digital BOD System', ar: 'Digital BOD System' },
-        image: '/img/Companies and Products/Digital BOD System.webp',
+        image: '/img/partners/digital-bod-system.webp',
         detailUrl: 'https://www.lovibond.com/PW/Water-Testing/Products/Lab-Portable-Instruments/BOD-determination/BD-600',
       },
       {
         name: { en: 'Jar Test', ar: 'Jar Test' },
-        image: '/img/Companies and Products/Jar Test.webp',
+        image: '/img/partners/jar-test.webp',
         detailUrl: 'https://www.lovibond.com/en/PW/Water-Testing/Products/Lab-Portable-Instruments/Floc-Tester/ET-750',
       },
       {
         name: { en: 'Reagents', ar: 'Reagents' },
-        image: '/img/Companies and Products/Reagent.webp',
+        image: '/img/partners/reagents.webp',
         detailUrl: 'https://www.lovibond.com/en/PW/Water-Testing/Products/Reagents',
       },
     ],
@@ -1006,32 +1006,32 @@ export const PARTNER_DETAILS: Record<string, PartnerDetail> = {
     products: [
       {
         name: { en: 'Portable Landfill Gas Analyzers', ar: 'Portable Landfill Gas Analyzers' },
-        image: '/img/Companies and Products/Portable Landfill Gas Analyzers.webp',
+        image: '/img/partners/portable-landfill-gas-analyzers.webp',
         detailUrl: 'https://www.qedenv.com/products/?tags=2770',
       },
       {
         name: { en: 'Fixed Landfill Gas Analyzers', ar: 'Fixed Landfill Gas Analyzers' },
-        image: '/img/Companies and Products/Fixed Landfill Gas Analyzers.webp',
+        image: '/img/partners/fixed-landfill-gas-analyzers.webp',
         detailUrl: 'https://www.qedenv.com/products/?tags=2770',
       },
       {
         name: { en: 'Portable Biogas Analyzers', ar: 'Portable Biogas Analyzers' },
-        image: '/img/Companies and Products/Portable Biogas Analyzers.webp',
+        image: '/img/partners/portable-biogas-analyzers.webp',
         detailUrl: 'https://www.qedenv.com/products/?tags=2770',
       },
       {
         name: { en: 'Fixed Biogas Analyzers', ar: 'Fixed Biogas Analyzers' },
-        image: '/img/Companies and Products/Fixed Biogas Analyzers.webp',
+        image: '/img/partners/fixed-biogas-analyzers.webp',
         detailUrl: 'https://www.qedenv.com/products/?tags=2770',
       },
       {
         name: { en: 'Portable Gas Detector &Personal protection for hazardous environments', ar: 'Portable Gas Detector &Personal protection for hazardous environments' },
-        image: '/img/Companies and Products/Portable Gas Detector &Personal protection for hazardous environments.webp',
+        image: '/img/partners/portable-gas-detector-personal-protection-for-hazardous-environments.webp',
         detailUrl: 'https://www.qedenv.com/products/?tags=2770',
       },
       {
         name: { en: 'Analyzer For : N2O, H2 , CH4 ,CO, CO2 ,H2S ,O2 , NH3', ar: 'Analyzer For : N2O, H2 , CH4 ,CO, CO2 ,H2S ,O2 , NH3' },
-        image: '/img/Companies and Products/Analyzer For N2O, H2 , CH4 ,CO, CO2 ,H2S ,O2 , NH3.webp',
+        image: '/img/partners/analyzer-for-n2o-h2-ch4-co-co2-h2s-o2-nh3.webp',
         detailUrl: 'https://www.qedenv.com/products/?tags=2770',
       },
     ],
@@ -1086,22 +1086,22 @@ export const PARTNER_DETAILS: Record<string, PartnerDetail> = {
     products: [
       {
         name: { en: 'Gas Detector Tube', ar: 'Gas Detector Tube' },
-        image: '/img/Companies and Products/Gas Detector Tube.webp',
+        image: '/img/partners/gas-detector-tube.webp',
         detailUrl: '../EN/https://www.komyokk.co.jp/en/product/001/index.html',
       },
       {
         name: { en: 'Single-Gas Monitors', ar: 'Single-Gas Monitors' },
-        image: '/img/Companies and Products/Single-Gas Monitors.webp',
+        image: '/img/partners/single-gas-monitors.webp',
         detailUrl: '../EN/https://www.komyokk.co.jp/en/product/002/index.html',
       },
       {
         name: { en: 'Multi-Gas Monitors', ar: 'Multi-Gas Monitors' },
-        image: '/img/Companies and Products/Multi-Gas Monitors.webp',
+        image: '/img/partners/multi-gas-monitors.webp',
         detailUrl: '../EN/https://www.komyokk.co.jp/en/product/002/index.html',
       },
       {
         name: { en: 'Gas Alarm Meters', ar: 'Gas Alarm Meters' },
-        image: '/img/Companies and Products/Gas Alarm Meters.webp',
+        image: '/img/partners/gas-alarm-meters.webp',
         detailUrl: '../EN/https://www.komyokk.co.jp/en/product/003/index.html',
       },
     ],
@@ -1156,7 +1156,7 @@ export const PARTNER_DETAILS: Record<string, PartnerDetail> = {
     products: [
       {
         name: { en: 'Weather Stations', ar: 'Weather Stations' },
-        image: '/img/Companies and Products/71wSg--3Q4L._AC_UF1000,1000_QL80_.webp',
+        image: '/img/partners/weather-stations.webp',
         detailUrl: 'https://www.davisinstruments.com/pages/weather-stations',
       },
     ],
@@ -1211,17 +1211,17 @@ export const PARTNER_DETAILS: Record<string, PartnerDetail> = {
     products: [
       {
         name: { en: 'Multi-Analyte Photometers', ar: 'Multi-Analyte Photometers' },
-        image: '/img/Companies and Products/Multi-Analyte Photometers.webp',
+        image: '/img/partners/multi-analyte-photometers.webp',
         detailUrl: 'https://www.chemetrics.com/product/v-2000-multi-analyte-photometer-for-water-quality-analysis/',
       },
       {
         name: { en: 'SAM Single Analyte Meters', ar: 'SAM Single Analyte Meters' },
-        image: '/img/Companies and Products/SAM Single Analyte Meters.webp',
+        image: '/img/partners/sam-single-analyte-meters.webp',
         detailUrl: 'https://www.chemetrics.com/sam-single-analyte-meters/',
       },
       {
         name: { en: 'Reagents for Water Testing', ar: 'Reagents for Water Testing' },
-        image: '/img/Companies and Products/K-60022.webp',
+        image: '/img/partners/reagents-for-water-testing.webp',
         detailUrl: 'https://www.chemetrics.com/',
       },
     ],
@@ -1276,22 +1276,22 @@ export const PARTNER_DETAILS: Record<string, PartnerDetail> = {
     products: [
       {
         name: { en: 'FluoroCheck II Benchtop Unit for Petroleum Oils', ar: 'FluoroCheck II Benchtop Unit for Petroleum Oils' },
-        image: '/img/Companies and Products/Arjayeng1.webp',
+        image: '/img/partners/fluorocheck-ii-benchtop-unit-for-petroleum-oils.webp',
         detailUrl: 'https://arjayeng.com/product/fluorocheck-ii-benchtop-unit-for-petroleum-oils/',
       },
       {
         name: { en: 'HydroSense 4420-OCM/4410-OCM Continuous Closed-Loop for All Oil Types', ar: 'HydroSense 4420-OCM/4410-OCM Continuous Closed-Loop for All Oil Types' },
-        image: '/img/Companies and Products/HydroSense 4420-OCM Continuous Closed-Loop for All Oil Types.webp',
+        image: '/img/partners/hydrosense-4420-ocm-4410-ocm-continuous-closed-loop-for-all-oil-types.webp',
         detailUrl: 'https://arjayeng.com/product/hydrosense-4420-ocm-continuous-closed-loop-for-all-oil-types/',
       },
       {
         name: { en: 'On-line alarm for Oil in Water Monitor', ar: 'On-line alarm for Oil in Water Monitor' },
-        image: '/img/Companies and Products/On-line alarm for Oil in Water Monitor.webp',
+        image: '/img/partners/on-line-alarm-for-oil-in-water-monitor.webp',
         detailUrl: 'https://arjayeng.com/categories/oil-water-separator-sump-monitors/',
       },
       {
         name: { en: 'Level monitors & controls for both liquid and solid', ar: 'Level monitors & controls for both liquid and solid' },
-        image: '/img/Companies and Products/Level monitors & controls for both liquid and solid.webp',
+        image: '/img/partners/level-monitors-controls-for-both-liquid-and-solid.webp',
         detailUrl: 'https://arjayeng.com/categories/level-controls/',
       },
     ],
@@ -1346,17 +1346,17 @@ export const PARTNER_DETAILS: Record<string, PartnerDetail> = {
     products: [
       {
         name: { en: 'Weather Meters', ar: 'Weather Meters' },
-        image: '/img/Companies and Products/Weather Meter.webp',
+        image: '/img/partners/weather-meters.webp',
         detailUrl: 'https://kestrelmeters.com/#:~:text=About%20Kestrel%20Weather%20Meters&text=Hand%20held%20wind%20and%20weather,humidity%20and%20heat%20stress%20information.',
       },
       {
         name: { en: 'Weather Stations', ar: 'Weather Stations' },
-        image: '/img/Companies and Products/Weather Stations123.webp',
+        image: '/img/partners/weather-stations-1.webp',
         detailUrl: 'https://kestrelinstruments.com/kestrelmet-weather-stations',
       },
       {
         name: { en: 'Heat Stress Tracker', ar: 'Heat Stress Tracker' },
-        image: '/img/Companies and Products/Heat Stress Tracker.webp',
+        image: '/img/partners/heat-stress-tracker.webp',
         detailUrl: 'https://kestrelinstruments.com/kestrel-5400-heat-stress-tracker',
       },
     ],
@@ -1388,7 +1388,7 @@ export const PARTNER_DETAILS: Record<string, PartnerDetail> = {
     products: [
       {
         name: { en: 'High and Low Air Samplers for TSP, PM 10, PM 2.5 Lead sampling', ar: 'أجهزة أخذ عينات الهواء المرتفعة والمنخفضة لـ TSP و PM 10 و PM 2.5 وأخذ عينات الرصاص' },
-        image: '/img/Companies and Products/Air Sampler.webp',
+        image: '/img/partners/high-and-low-air-samplers-for-tsp-pm-10-pm-2-5-lead-sampling.webp',
         detailUrl: 'https://tisch-env.com/shop/',
       },
     ],
