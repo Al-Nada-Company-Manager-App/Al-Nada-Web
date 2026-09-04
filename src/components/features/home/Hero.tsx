@@ -26,7 +26,7 @@ export function Hero() {
   const isRTL = language === "ar";
   const isDark = mounted ? resolvedTheme === "dark" : true;
   const customerLogos = Array.from({ length: 15 }, (_, index) => ({
-    src: `/img/customers/${index + 1}.jpg`,
+    src: `/img/customers/${index + 1}.webp`,
     alt: `Customer logo ${index + 1}`,
   }));
 
