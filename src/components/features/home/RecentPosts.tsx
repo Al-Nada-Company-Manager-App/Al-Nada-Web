@@ -130,7 +130,7 @@ export function RecentPosts() {
             size="lg"
             className="text-base px-8 py-6 rounded-full shadow-lg shadow-primary/25 hover:shadow-primary/40 transition-all bg-primary text-white hover:bg-primary/90 border-none hover:-translate-y-0.5 font-bold gap-2"
           >
-            <Link href="/posts">
+            <Link aria-label="View all recent news" href="/posts">
               {t.showMore}
               <ArrowRight className={cn("h-5 w-5", isRTL && "rotate-180")} />
             </Link>

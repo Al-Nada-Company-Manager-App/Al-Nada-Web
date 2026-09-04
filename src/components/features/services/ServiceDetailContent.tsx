@@ -285,8 +285,7 @@ export function ServiceDetailContent({ service, language, rtl, theme }: ServiceD
                     : 'Our team of experts is ready to help you find the perfect solutions for your environmental and industrial needs.'}
                 </p>
                 <div className="flex flex-wrap justify-center gap-4">
-                  <Link
-                    href="/contact"
+                  <Link aria-label="Breadcrumb navigation link"                     href="/contact"
                     className={cn(
                       "inline-flex items-center gap-2 px-8 py-3.5 rounded-full font-semibold text-sm transition-all duration-300",
                       "bg-primary text-white hover:bg-primary/90 hover:shadow-lg hover:shadow-primary/20",
@@ -295,8 +294,7 @@ export function ServiceDetailContent({ service, language, rtl, theme }: ServiceD
                     {language === 'ar' ? 'تواصل معنا' : 'Contact Us'}
                     {rtl ? <ArrowLeft className="w-4 h-4" /> : <ArrowRight className="w-4 h-4" />}
                   </Link>
-                  <Link
-                    href="/products"
+                  <Link aria-label="Breadcrumb navigation link"                     href="/products"
                     className={cn(
                       "inline-flex items-center gap-2 px-8 py-3.5 rounded-full font-semibold text-sm transition-all duration-300",
                       isDark 

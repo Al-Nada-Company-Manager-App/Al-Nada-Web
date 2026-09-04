@@ -159,7 +159,7 @@ export function Hero() {
                     "w-full sm:w-auto",
                   )}
                 >
-                  <Link href="/products">{t.cta}</Link>
+                  <Link aria-label="View all products" href="/products">{t.cta}</Link>
                 </Button>
                 <Button
                   asChild
@@ -174,7 +174,7 @@ export function Hero() {
                       : "border-[#d6e6ff] bg-white/50 text-[#0a1a4f] hover:bg-white/80 hover:border-primary/40",
                   )}
                 >
-                  <Link href="/contact">{t.secondaryCta}</Link>
+                  <Link aria-label="Contact us" href="/contact">{t.secondaryCta}</Link>
                 </Button>
               </div>
 

@@ -85,8 +85,7 @@ export function PageHero({
         >
           {/* Breadcrumb pill */}
           <nav className="flex items-center justify-center gap-2 text-xs mb-8">
-            <Link
-              href="/"
+            <Link aria-label="Navigation link"               href="/"
               className={cn(
                 "flex items-center gap-1 px-3 py-1.5 rounded-full border transition-all",
                 isDark

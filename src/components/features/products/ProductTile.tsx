@@ -29,7 +29,7 @@ export function ProductTile({
       viewport={{ once: true }}
       transition={{ delay: index * 0.03, duration: 0.4, ease: "easeOut" }}
     >
-      <Link href={`/partners/${product.slug}`} className="block group">
+      <Link aria-label={`View product ${product.title.en}`} href={`/partners/${product.slug}`} className="block group">
         <div
           className={cn(
             "relative aspect-square rounded-2xl overflow-hidden transition-all duration-500",

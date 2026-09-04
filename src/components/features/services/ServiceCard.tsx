@@ -25,7 +25,7 @@ export function ServiceCard({
       transition={{ delay: index * 0.1, duration: 0.5, ease: "easeOut" }}
       className="group"
     >
-      <Link href={`/services/${service.slug}`}>
+      <Link aria-label={`View service ${service.title.en}`} href={`/services/${service.slug}`}>
         <div
           className={cn(
             "relative h-72 md:h-80 rounded-2xl overflow-hidden cursor-pointer transition-all duration-500",

@@ -280,8 +280,7 @@ export function PartnerDetailContent({
                 viewport={{ once: true }}
                 className="text-center"
               >
-                <Link
-                  href={`/partners/${partner.slug}/products`}
+                <Link aria-label="Breadcrumb navigation link"                   href={`/partners/${partner.slug}/products`}
                   className={cn(
                     "inline-flex items-center gap-2 px-8 py-3.5 rounded-full font-semibold text-sm transition-all duration-300",
                     "bg-primary text-white hover:bg-primary/90 hover:shadow-lg hover:shadow-primary/20",
@@ -305,8 +304,7 @@ export function PartnerDetailContent({
                 viewport={{ once: true }}
                 className="text-center"
               >
-                <Link
-                  href={`/partners/${partner.slug}/products`}
+                <Link aria-label="Breadcrumb navigation link"                   href={`/partners/${partner.slug}/products`}
                   className={cn(
                     "inline-flex items-center gap-2 px-8 py-3.5 rounded-full font-semibold text-sm transition-all duration-300",
                     "bg-primary text-white hover:bg-primary/90 hover:shadow-lg hover:shadow-primary/20",

@@ -25,7 +25,7 @@ export function PartnerCard({
       transition={{ delay: index * 0.1, duration: 0.5, ease: "easeOut" }}
       className="group"
     >
-      <Link href={`/partners/${partner.slug}`}>
+      <Link aria-label={`View partner ${partner.title.en}`} href={`/partners/${partner.slug}`}>
         <div
           className={cn(
             "relative h-72 md:h-80 rounded-2xl overflow-hidden cursor-pointer transition-all duration-500",

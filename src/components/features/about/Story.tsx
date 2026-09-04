@@ -262,7 +262,7 @@ export function AboutStory({
                   size="lg"
                   className="text-base px-8 py-6 rounded-full shadow-lg shadow-primary/25 hover:shadow-primary/40 transition-all bg-primary text-white hover:bg-primary/90 border-none hover:-translate-y-0.5 font-bold"
                 >
-                  <Link href="/about">{about.cta}</Link>
+                  <Link aria-label="Read more about our story" href="/about">{about.cta}</Link>
                 </Button>
               </div>
             )}

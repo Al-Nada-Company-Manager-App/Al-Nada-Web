@@ -72,8 +72,7 @@ export function SinglePost({ post }: { post: Post }) {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
         >
-          <Link
-            href="/posts"
+          <Link aria-label="Return to News list"             href="/posts"
             className={cn(
               "inline-flex items-center gap-2 text-sm font-bold mb-10 transition-colors duration-300 group",
               isDark ? "text-gray-400 hover:text-white" : "text-[#4a6fa5] hover:text-[#0a1a4f]"

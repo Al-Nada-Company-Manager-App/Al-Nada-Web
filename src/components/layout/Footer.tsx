@@ -117,8 +117,7 @@ export function Footer() {
               { label: { en: "Partners", ar: "شركاؤنا" }, href: "/#partners" },
             ].map((link) => (
               <li key={link.href}>
-                <Link
-                  href={link.href}
+                <Link aria-label={`Go to ${link.label.en}`}                   href={link.href}
                   className="text-muted-foreground hover:text-primary transition-colors flex items-center gap-2 group"
                 >
                   <span
@@ -156,8 +155,7 @@ export function Footer() {
               { label: { en: "Consultation", ar: "استشارات" }, href: "#" },
             ].map((link, idx) => (
               <li key={idx}>
-                <Link
-                  href={link.href}
+                <Link aria-label={`Go to ${link.label.en}`}                   href={link.href}
                   className="text-muted-foreground hover:text-primary transition-colors flex items-center gap-2 group"
                 >
                   <ArrowRight
@@ -232,10 +230,10 @@ export function Footer() {
             : "الندى العلمية. جميع الحقوق محفوظة."}
         </p>
         <div className="flex items-center gap-6">
-          <Link href="#" className="hover:text-foreground transition-colors">
+          <Link aria-label="Social Media Profile" href="#" className="hover:text-foreground transition-colors">
             {language === "en" ? "Privacy Policy" : "سياسة الخصوصية"}
           </Link>
-          <Link href="#" className="hover:text-foreground transition-colors">
+          <Link aria-label="Social Media Profile" href="#" className="hover:text-foreground transition-colors">
             {language === "en" ? "Terms of Service" : "شروط الخدمة"}
           </Link>
         </div>

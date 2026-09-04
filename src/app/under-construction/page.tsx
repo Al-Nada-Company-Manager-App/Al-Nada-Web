@@ -128,7 +128,7 @@ export default function UnderConstruction() {
           size="lg"
           className="text-base px-8 py-6 rounded-full shadow-lg shadow-primary/25 hover:shadow-primary/40 transition-all bg-primary text-white hover:bg-primary/90 hover:-translate-y-0.5 font-bold gap-2"
         >
-          <Link href="/">
+          <Link aria-label="Return to Home Page" href="/">
             <Home className="h-5 w-5" />
             {t.cta}
           </Link>

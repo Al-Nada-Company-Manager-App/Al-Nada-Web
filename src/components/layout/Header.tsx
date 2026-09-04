@@ -62,8 +62,7 @@ export function Header() {
               : "left-6 lg:left-8",
           )}
         >
-          <Link
-            href="/products"
+          <Link aria-label="Navigation Link"             href="/products"
             className="inline-flex items-center justify-center px-5 py-2 rounded-full font-bold text-sm transition-all border-2 border-primary/30 text-primary hover:bg-primary hover:text-white hover:border-primary hover:-translate-y-0.5 shadow-sm hover:shadow-lg hover:shadow-primary/25"
           >
             {language === "en" ? "Explore Products" : "استكشف المنتجات"}
@@ -87,8 +86,7 @@ export function Header() {
             )}
           >
             {navItems.slice(0, 2).map((item) => (
-              <Link
-                key={item.href}
+              <Link aria-label={`Navigate to ${item.label.en}`}                 key={item.href}
                 href={item.href}
                 className={cn(
                   "text-sm font-bold transition-all duration-300",
@@ -104,7 +102,7 @@ export function Header() {
           </div>
 
           {/* Logo */}
-          <Link href="/" className="shrink-0 mx-4 group relative z-10">
+          <Link aria-label="Al-Nada Home" href="/" className="shrink-0 mx-4 group relative z-10">
             <div
               className={cn(
                 "flex items-center justify-center w-24 h-24 rounded-full transition-all duration-300",
@@ -139,8 +137,7 @@ export function Header() {
             )}
           >
             {navItems.slice(2).map((item) => (
-              <Link
-                key={item.href}
+              <Link aria-label={`Navigate to ${item.label.en}`}                 key={item.href}
                 href={item.href}
                 className={cn(
                   "text-sm font-bold transition-all duration-300",
@@ -189,8 +186,7 @@ export function Header() {
           </button>
 
           {/* CTA */}
-          <Link
-            href="/contact"
+          <Link aria-label="Navigation Link"             href="/contact"
             className="hidden md:inline-flex items-center justify-center px-6 py-2.5 rounded-full font-bold bg-primary text-white hover:bg-primary/90 transition-all shadow-lg shadow-primary/25 hover:shadow-primary/40 hover:-translate-y-0.5 text-sm"
           >
             {language === "en" ? "Contact" : "اتصل بنا"}
@@ -216,8 +212,7 @@ export function Header() {
         <div className="fixed inset-0 z-40 bg-background/98 backdrop-blur-xl md:hidden pt-32 px-6 transition-all duration-300">
           <div className="flex flex-col gap-8 items-center text-center">
             {navItems.map((item) => (
-              <Link
-                key={item.href}
+              <Link aria-label={`Navigate to ${item.label.en}`}                 key={item.href}
                 href={item.href}
                 onClick={() => setIsMenuOpen(false)}
                 className={cn(
@@ -244,8 +239,7 @@ export function Header() {
               </span>
             </button>
 
-            <Link
-              href="/contact"
+            <Link aria-label="Navigation Link"               href="/contact"
               onClick={() => setIsMenuOpen(false)}
               className="w-full max-w-xs px-8 py-4 rounded-full font-bold bg-primary text-primary-foreground text-lg shadow-xl shadow-primary/20 hover:scale-105 transition-all"
             >
