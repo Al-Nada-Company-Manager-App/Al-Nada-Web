@@ -31,11 +31,14 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 export async function generateStaticParams() {
   try {
     const posts = await getPosts();
+    if (!posts || posts.length === 0) {
+      return [{ id: 'not-found' }];
+    }
     return posts.map((post) => ({
       id: post.id,
     }));
   } catch {
-    return [];
+    return [{ id: 'not-found' }];
   }
 }
 
