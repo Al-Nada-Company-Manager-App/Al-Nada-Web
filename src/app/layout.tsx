@@ -13,7 +13,10 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Al-Nada Scientific Office | Environmental & Scientific Solutions",
+  title: {
+    template: "%s | Al-Nada Scientific Office",
+    default: "Al-Nada Scientific Office | Environmental & Scientific Solutions",
+  },
   description:
     "Exclusive agent for world-leading manufacturers of environmental, scientific, and industrial instruments in Egypt and the Middle East.",
   icons: {

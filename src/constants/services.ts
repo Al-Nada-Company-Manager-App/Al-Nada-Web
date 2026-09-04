@@ -56,8 +56,8 @@ export const SERVICES: ServiceItem[] = [
       en: "Environmental Measurements & Studies",
       ar: "إجراء القياسات والدراسات البيئية",
     },
-    image: "/img/Applications/consult.jpg",
-    icon: "/img/Applications/planet-earth.jpg",
+    image: "/img/Applications/environmental-measurements.jpg",
+    icon: "/img/Applications/environmental-measurements-icon.jpg",
     slug: "environmental-measurements",
     detail: {
       intro: {
@@ -139,8 +139,8 @@ export const SERVICES: ServiceItem[] = [
       en: "Laboratory Equipment",
       ar: "معدات المختبرات",
     },
-    image: "/img/Applications/lab.jpg",
-    icon: "/img/Applications/laboratory.jpg",
+    image: "/img/Applications/laboratory-equipment.jpg",
+    icon: "/img/Applications/laboratory-icon.jpg",
     slug: "laboratory-equipment",
     detail: {
       intro: {
@@ -230,8 +230,8 @@ export const SERVICES: ServiceItem[] = [
       en: "Controlling & Monitoring Equipment",
       ar: "معدات التحكم والمراقبة",
     },
-    image: "/img/Applications/control.jpg",
-    icon: "/img/Applications/tablet.jpg",
+    image: "/img/Applications/controlling-monitoring.jpg",
+    icon: "/img/Applications/controlling-monitoring-icon.jpg",
     slug: "controlling-monitoring",
     detail: {
       intro: {
@@ -317,8 +317,8 @@ export const SERVICES: ServiceItem[] = [
       en: "Measuring Instruments (Air - Water - Soil)",
       ar: "أدوات القياس (الهواء - الماء - التربة)",
     },
-    image: "/img/Applications/3.jpg",
-    icon: "/img/Applications/meter.jpg",
+    image: "/img/Applications/measuring-instruments.jpg",
+    icon: "/img/Applications/measuring-instruments-icon.jpg",
     slug: "measuring-instruments",
     detail: {
       intro: {
@@ -380,8 +380,8 @@ export const SERVICES: ServiceItem[] = [
       en: "Personal Protection Equipment (PPE)",
       ar: "معدات الحماية الشخصية (PPE)",
     },
-    image: "/img/Applications/Personal-Protection-Equipment-scaled.jpg",
-    icon: "/img/Applications/personal-protective-equipment.jpg",
+    image: "/img/Applications/personal-protection-equipment.jpg",
+    icon: "/img/Applications/personal-protection-equipment-icon.jpg",
     slug: "ppe",
     detail: {
       intro: {
@@ -449,8 +449,8 @@ export const SERVICES: ServiceItem[] = [
       en: "Maintenance & Support",
       ar: "دعم وصيانة",
     },
-    image: "/img/Applications/repairs.jpg",
-    icon: "/img/Applications/repair-service.jpg",
+    image: "/img/Applications/maintenance-support.jpg",
+    icon: "/img/Applications/maintenance-support-icon.jpg",
     slug: "maintenance-support",
     detail: {
       intro: {
@@ -516,8 +516,8 @@ export const SERVICES: ServiceItem[] = [
       en: "Training",
       ar: "تدريب",
     },
-    image: "/img/Applications/training.jpg",
-    icon: "/img/Applications/presentation.jpg",
+    image: "/img/Applications/training-services.jpg",
+    icon: "/img/Applications/training-icon.jpg",
     slug: "training",
     detail: {
       intro: {
@@ -583,8 +583,8 @@ export const SERVICES: ServiceItem[] = [
       en: "Calibration",
       ar: "معايرة",
     },
-    image: "/img/Applications/5.jpg",
-    icon: "/img/Applications/instrumentation.jpg",
+    image: "/img/Applications/calibration-services.jpg",
+    icon: "/img/Applications/calibration-icon.jpg",
     slug: "calibration",
     detail: {
       intro: {
@@ -650,8 +650,8 @@ export const SERVICES: ServiceItem[] = [
       en: "Glassware & Chemicals",
       ar: "الأواني الزجاجية والمواد الكيميائية",
     },
-    image: "/img/Applications/Laboratory-glassware.jpg",
-    icon: "/img/Applications/glassware.jpg",
+    image: "/img/Applications/glassware-chemicals.jpg",
+    icon: "/img/Applications/glassware-chemicals-icon.jpg",
     slug: "glassware-chemicals",
     detail: {
       intro: {
