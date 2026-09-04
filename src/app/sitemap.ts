@@ -1,11 +1,12 @@
 import { MetadataRoute } from "next";
 import { SERVICES } from "@/constants/services";
 import { PARTNERS } from "@/constants/partners";
+import { getPosts } from "@/lib/api";
 
 const BASE_URL = "https://alnadascientific.com";
 export const dynamic = "force-static";
 
-export default function sitemap(): MetadataRoute.Sitemap {
+export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const routes = [
     "",
     "/about",
@@ -14,11 +15,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/products",
     "/contact",
     "/training",
+    "/posts",
   ].map((route) => ({
     url: `${BASE_URL}${route}`,
     lastModified: new Date(),
     changeFrequency: "monthly" as const,
-    priority: route === "" ? 1 : 0.8,
+    priority: route === "" ? 1 : (route === "/posts" ? 0.9 : 0.8),
   }));
 
   const serviceRoutes = SERVICES.map((service) => ({
@@ -42,5 +44,19 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.7,
   }));
 
-  return [...routes, ...serviceRoutes, ...partnerRoutes, ...partnerProductsRoutes];
+  // Fetch dynamic posts for the sitemap
+  let postRoutes: MetadataRoute.Sitemap = [];
+  try {
+    const posts = await getPosts();
+    postRoutes = posts.map((post) => ({
+      url: `${BASE_URL}/posts/${post.id}`,
+      lastModified: new Date(post.createdAt),
+      changeFrequency: "monthly" as const,
+      priority: 0.8,
+    }));
+  } catch (error) {
+    console.error("Failed to fetch posts for sitemap:", error);
+  }
+
+  return [...routes, ...serviceRoutes, ...partnerRoutes, ...partnerProductsRoutes, ...postRoutes];
 }
