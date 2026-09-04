@@ -13,6 +13,17 @@ import { LazyImage } from "@/components/ui/LazyImage";
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 import rehypeRaw from 'rehype-raw';
+import 'github-markdown-css/github-markdown.css';
+
+// Helper to unescape HTML if the admin editor saved it as encoded text
+function unescapeHtml(safe: string) {
+  return safe
+    .replace(/&amp;/g, '&')
+    .replace(/&lt;/g, '<')
+    .replace(/&gt;/g, '>')
+    .replace(/&quot;/g, '"')
+    .replace(/&#039;/g, "'");
+}
 
 export function SinglePost({ post }: { post: Post }) {
   const { language } = useLanguage();
@@ -31,6 +42,8 @@ export function SinglePost({ post }: { post: Post }) {
     language === "ar" ? "ar-EG" : "en-US",
     { month: "long", day: "numeric", year: "numeric" }
   );
+
+  const rawMarkdown = unescapeHtml(post.body);
 
   return (
     <article
@@ -116,19 +129,20 @@ export function SinglePost({ post }: { post: Post }) {
               {post.title}
             </h1>
 
-            <div
-              className={cn(
-                "prose prose-lg max-w-none transition-colors duration-300",
-                isDark
-                  ? "prose-invert prose-p:text-gray-300 prose-headings:text-white prose-a:text-primary-light hover:prose-a:text-white"
-                  : "prose-p:text-[#4a6fa5] prose-headings:text-[#0a1a4f] prose-a:text-primary hover:prose-a:text-[#0a1a4f]"
-              )}
+            {/* GitHub Markdown Wrapper */}
+            <div 
+              data-theme={isDark ? "dark" : "light"}
+              className="markdown-body !bg-transparent !text-inherit"
+              style={{
+                backgroundColor: 'transparent',
+                color: isDark ? '#e5e7eb' : '#0a1a4f',
+              }}
             >
               <ReactMarkdown 
                 remarkPlugins={[remarkGfm]} 
                 rehypePlugins={[rehypeRaw]}
               >
-                {post.body}
+                {rawMarkdown}
               </ReactMarkdown>
             </div>
 
