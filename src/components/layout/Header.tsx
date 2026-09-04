@@ -168,6 +168,7 @@ export function Header() {
           <button
             onClick={() => setTheme(currentTheme === "dark" ? "light" : "dark")}
             className="p-2 text-foreground hover:text-primary dark:text-gray-400 dark:hover:text-white transition-colors"
+            aria-label="Toggle theme"
           >
             {mounted &&
               (currentTheme === "dark" ? (
@@ -181,6 +182,7 @@ export function Header() {
           <button
             onClick={toggleLanguage}
             className="hidden md:flex items-center gap-1 text-xs font-bold text-foreground hover:text-primary dark:text-gray-400 dark:hover:text-white transition-colors uppercase"
+            aria-label="Toggle language"
           >
             <Globe className="h-4 w-4" />
             <span>{language === "en" ? "AR" : "EN"}</span>
@@ -198,6 +200,7 @@ export function Header() {
           <button
             onClick={() => setIsMenuOpen(!isMenuOpen)}
             className="md:hidden text-foreground hover:text-primary dark:text-gray-300 dark:hover:text-white p-2"
+            aria-label="Toggle mobile menu"
           >
             {isMenuOpen ? (
               <X className="h-6 w-6" />

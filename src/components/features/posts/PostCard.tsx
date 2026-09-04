@@ -49,7 +49,11 @@ export function PostCard({
       transition={{ delay: index * 0.1, duration: 0.5, ease: "easeOut" }}
       className="group flex flex-col h-full"
     >
-      <Link href={`/posts/${post.id}`} className="flex flex-col flex-1">
+      <Link 
+        href={`/posts/${post.id}`} 
+        className="flex flex-col flex-1"
+        aria-label={`${t.readArticle}: ${post.title}`}
+      >
         <div
           className={cn(
             "flex flex-col flex-1 rounded-2xl overflow-hidden cursor-pointer transition-all duration-500 border",
