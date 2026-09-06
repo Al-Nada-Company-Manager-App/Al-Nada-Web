@@ -21,7 +21,7 @@ export async function GET() {
         { status: response.status },
       );
     }
-me
+
     const posts = await response.json();
     return NextResponse.json(posts);
   } catch {

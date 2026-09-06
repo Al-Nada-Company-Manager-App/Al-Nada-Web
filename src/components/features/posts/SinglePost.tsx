@@ -13,7 +13,6 @@ import { LazyImage } from "@/components/ui/LazyImage";
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 import rehypeRaw from 'rehype-raw';
-import 'github-markdown-css/github-markdown.css';
 
 // Helper to unescape HTML if the admin editor saved it as encoded text
 function unescapeHtml(safe: string) {
@@ -105,7 +104,8 @@ export function SinglePost({ post }: { post: Post }) {
                 alt={post.title}
                 width={1600}
                 height={900}
-                className="w-full h-auto object-contain"
+                className="block w-full h-auto object-contain"
+                wrapperClassName="w-full"
               />
             </div>
           )}
@@ -148,10 +148,13 @@ export function SinglePost({ post }: { post: Post }) {
 
             {post.image2Url && (
               <div className="mt-16 w-full rounded-2xl overflow-hidden shadow-lg shadow-black/10 bg-gray-100 dark:bg-gray-800">
-                <img
+                <LazyImage
                   src={post.image2Url}
                   alt="Supplementary Material"
-                  className="w-full h-auto object-contain"
+                  width={1600}
+                  height={900}
+                  className="block w-full h-auto object-contain"
+                  wrapperClassName="w-full"
                 />
               </div>
             )}
