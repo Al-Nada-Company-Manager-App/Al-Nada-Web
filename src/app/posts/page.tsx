@@ -1,6 +1,5 @@
 import { Metadata } from 'next';
-import { getPosts } from '@/lib/api';
-import { PostsList } from '@/components/features/posts/PostsList';
+import { PostsPageClient } from '@/components/features/posts/PostsPageClient';
 
 export const metadata: Metadata = {
   title: 'Blog & News | Al-Nada Scientific',
@@ -8,6 +7,5 @@ export const metadata: Metadata = {
 };
 
 export default async function PostsPage() {
-  const posts = await getPosts();
-  return <PostsList posts={posts} />;
+  return <PostsPageClient />;
 }
