@@ -2,6 +2,9 @@ import { NextResponse } from 'next/server';
 
 const API_BASE = process.env.NEXT_PUBLIC_API_URL;
 
+export const dynamic = 'force-static';
+export const revalidate = 60;
+
 export async function GET() {
   if (!API_BASE) {
     return NextResponse.json(
