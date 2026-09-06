@@ -40,8 +40,6 @@ export function RecentPosts() {
     );
   }
 
-  if (posts.length === 0) return null;
-
   return (
     <section
       id="recent-posts"
@@ -104,18 +102,24 @@ export function RecentPosts() {
           </p>
         </motion.div>
 
-        {/* Post Cards Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
-          {posts.map((post, index) => (
-            <PostCard
-              key={post.id}
-              post={post}
-              index={index}
-              language={language}
-              isDark={isDark}
-            />
-          ))}
-        </div>
+        {posts.length === 0 ? (
+          <div className="text-center py-20 bg-primary/5 rounded-3xl border border-primary/10">
+            <p className={cn("text-lg", isDark ? "text-gray-400" : "text-[#4a6fa5]")}>{t.noPosts}</p>
+          </div>
+        ) : (
+          /* Post Cards Grid */
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+            {posts.map((post, index) => (
+              <PostCard
+                key={post.id}
+                post={post}
+                index={index}
+                language={language}
+                isDark={isDark}
+              />
+            ))}
+          </div>
+        )}
 
         {/* CTA */}
         <motion.div
