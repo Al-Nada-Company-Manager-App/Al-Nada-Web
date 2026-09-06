@@ -1,5 +1,7 @@
 const API_BASE = process.env.NEXT_PUBLIC_API_URL;
 
+const PUBLIC_POSTS_ENDPOINT = '/api/posts';
+
 function getRequiredApiBase() {
   if (!API_BASE) {
     throw new Error('NEXT_PUBLIC_API_URL is not set');
@@ -22,7 +24,11 @@ export interface Post {
 }
 
 export async function getPosts(): Promise<Post[]> {
-  const res = await fetch(`${getRequiredApiBase()}/posts`, {
+  const endpoint = typeof window === 'undefined'
+    ? `${getRequiredApiBase()}/posts`
+    : PUBLIC_POSTS_ENDPOINT;
+
+  const res = await fetch(endpoint, {
     next: { revalidate: 60 }, // Revalidate every 60 seconds
   });
   

@@ -99,12 +99,13 @@ export function SinglePost({ post }: { post: Post }) {
           )}
         >
           {post.image1Url && (
-            <div className="relative w-full h-[300px] md:h-[400px] overflow-hidden bg-gray-100 dark:bg-gray-800">
+            <div className="w-full bg-gray-100 dark:bg-gray-800">
               <LazyImage
                 src={post.image1Url}
                 alt={post.title}
-                fill
-                className="object-cover"
+                width={1600}
+                height={900}
+                className="w-full h-auto object-contain"
               />
             </div>
           )}
@@ -146,11 +147,11 @@ export function SinglePost({ post }: { post: Post }) {
             </div>
 
             {post.image2Url && (
-              <div className="mt-16 relative w-full h-[300px] md:h-[400px] rounded-2xl overflow-hidden shadow-lg shadow-black/10">
+              <div className="mt-16 w-full rounded-2xl overflow-hidden shadow-lg shadow-black/10 bg-gray-100 dark:bg-gray-800">
                 <img
                   src={post.image2Url}
                   alt="Supplementary Material"
-                  className="w-full h-full object-cover"
+                  className="w-full h-auto object-contain"
                 />
               </div>
             )}
